@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Ma Shan Zheng';
+  src: url('/fonts/huanbi-brush.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --brush: 'Ma Shan Zheng', KaiTi, STKaiti, serif;
+}
+
+.scroll-title h1,
+.scroll-chapter h2,
+.scroll-brand,
+.exhibition-page h2,
+.exhibit-brand,
+.exhibit-nav nav a,
+.artwork-glyph,
+.copy-seal,
+.exhibit-dialog h2,
+.mural-viewer .mural-viewer-heading h2 {
+  font-family: var(--brush);
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+/* Mineral gold: a dark ochre base, uneven gold powder and fine brush streaks. */
+.scroll-title h1,
+.scroll-chapter h2,
+.exhibition-page h2,
+.exhibit-dialog h2 {
+  color: #91601e;
+  text-shadow: none;
+}
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .scroll-title h1,
+  .scroll-chapter h2,
+  .exhibition-page h2,
+  .exhibit-dialog h2 {
+    background-image:
+      url('/images/gold-grain.svg'),
+      repeating-linear-gradient(104deg, transparent 0 3px, #fff1b524 3.3px 3.8px, transparent 4px 7px, #49240719 7.2px 7.7px),
+      linear-gradient(168deg, #684016 0%, #a46d23 19%, #cf9f45 32%, #8c531b 45%, #e2b859 53%, #b7832c 62%, #724116 80%, #b38130 100%);
+    background-size: 130px 130px, auto, 100% 100%;
+    background-blend-mode: soft-light, soft-light, normal;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .35px #80551f88;
+    filter: drop-shadow(0 1px .35px #fff0c377) drop-shadow(0 2px 1px #65421624);
+  }
+
+  .scroll-title h1 {
+    -webkit-text-stroke: .65px #80551f99;
+    filter: drop-shadow(0 1px .5px #ffefb899) drop-shadow(0 3px 1.5px #67411833);
+  }
+}
+
+@media (forced-colors: active) {
+  .scroll-title h1,
+  .scroll-chapter h2,
+  .exhibition-page h2,
+  .exhibit-dialog h2 {
+    background: none;
+    color: CanvasText;
+    -webkit-text-fill-color: CanvasText;
+    -webkit-text-stroke: 0;
+    filter: none;
+  }
+}

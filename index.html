@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f1e8" />
+    <script>
+      if (!location.pathname.startsWith('/admin')) {
+        document.documentElement.dataset.siteShell = 'true';
+        document.querySelector('meta[name="theme-color"]').content = '#10292c';
+      }
+      if (location.pathname.replace(/\/$/, "") === "/cave") {
+        document.documentElement.dataset.caveEntry = "true";
+        document.querySelector('meta[name="theme-color"]').content = "#12201a";
+      }
+    </script>
+    <style>
+      html[data-site-shell], html[data-site-shell] body { margin: 0; min-height: 100%; background: #10292c; }
+      .site-initial-loading { min-height: 100svh; display: grid; place-content: center; color: #ead8b4; text-align: center; font: 1rem/1.8 KaiTi, serif; }
+      html[data-cave-entry] body {
+        min-height: 100%;
+        background: #12201a;
+        color: #f0e1c4;
+      }
+      #cave-boot-screen {
+        position: fixed;
+        z-index: 100;
+        inset: 0;
+        display: none;
+        place-content: center;
+        overflow: hidden;
+        padding: 1.5rem;
+        background: #12201a;
+        color: #f0e1c4;
+        text-align: center;
+      }
+      html[data-cave-entry] #cave-boot-screen { display: grid; }
+      .cave-boot-content { display: grid; justify-items: center; gap: 1rem; }
+      .cave-boot-spinner {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid #d8bd8c66;
+        border-top-color: #e6c27f;
+        border-radius: 50%;
+        animation: cave-boot-turn 1.2s linear infinite;
+      }
+      .cave-boot-kicker {
+        margin: 0;
+        color: #d4b580;
+        font: .7rem/1.5 "DM Mono", monospace;
+        letter-spacing: .12em;
+      }
+      .cave-boot-content h1 {
+        margin: 0;
+        font: 400 2rem/1.5 "Noto Serif SC", "Songti SC", serif;
+      }
+      .cave-boot-message {
+        margin: 0;
+        color: #c7cbb8;
+        font: 1rem/1.7 "Noto Serif SC", "Songti SC", serif;
+      }
+      @keyframes cave-boot-turn { to { transform: rotate(1turn); } }
+      @media (prefers-reduced-motion: reduce) {
+        .cave-boot-spinner { animation: none; border-top-color: #e6c27f; }
+      }
+    </style>
+    <title>焕壁 · 文物壁画智能修复</title>
+  </head>
+  <body>
+    <div id="cave-boot-screen" role="status" aria-live="polite">
+      <div class="cave-boot-content">
+        <span class="cave-boot-spinner" aria-hidden="true"></span>
+        <p class="cave-boot-kicker">HUANBI · IMMERSIVE GROTTO</p>
+        <h1>入窟，见千年。</h1>
+        <p class="cave-boot-message">正在点亮洞窟，铺陈千年丹青…</p>
+      </div>
+    </div>
+    <div id="root"><div class="site-initial-loading" role="status">焕 壁 · 正在展开千年丹青…</div></div>
+    <script type="module" src="/src/App.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+.particle-reveal{display:block;width:100%;height:100%;object-fit:contain;background:#08191e}
+@media(prefers-reduced-motion:reduce){.particle-reveal{animation:none}}

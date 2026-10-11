@@ -1,0 +1,37 @@
+# Publish only application sources, required assets, and setup documentation.
+/*
+!/.gitignore
+!/.env.example
+!/README.md
+!/package.json
+!/package-lock.json
+!/index.html
+!/vite.config.js
+!/src/
+!/server/
+!/public/
+
+# Local configuration, credentials, and generated output are never published.
+node_modules/
+dist/
+data/
+.env
+.env.*
+!.env.example
+*.log
+*.pem
+*.key
+*.p12
+.DS_Store
+Thumbs.db
+
+# Keep local tests and diagnostics outside the published source tree.
+**/test/
+**/tests/
+**/__tests__/
+**/test-results/
+**/playwright-report/
+**/coverage/
+*.test.*
+*.spec.*
+**/crop-report.json

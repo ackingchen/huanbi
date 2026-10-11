@@ -1,0 +1,159 @@
+.exhibition-page{--ex-ink:#533e2b;--ex-muted:#79634b;--ex-line:#a1845344;--ex-green:#31584b;color:var(--ex-ink);background:#eddec2}
+.exhibit-main{background:#17272a;position:relative;isolation:isolate;clip-path:inset(0);--ex-ink:#fff;--ex-muted:#fff;--ex-line:#d8b77555}.exhibit-main:before{content:'';position:fixed;inset:0;z-index:-1;background:linear-gradient(#07101466,#07101499),url('/images/exhibition-main-upper.webp') center top/cover no-repeat;pointer-events:none}.exhibit-width{width:90%;max-width:1240px;margin-inline:auto}
+.exhibit-nav{height:auto;min-height:6rem;gap:1rem;flex-wrap:wrap;padding:1rem 0;border-color:var(--ex-line)}.exhibit-brand{font:1.65rem KaiTi,STKaiti,serif;display:flex;align-items:center;gap:1.4rem;white-space:nowrap}.exhibit-brand span{font:.75rem var(--serif);letter-spacing:.12em;display:none}.exhibit-nav nav{display:flex;order:3;width:100%;justify-content:center;gap:2rem;font-size:.85rem;color:var(--ex-muted);border-top:1px solid var(--ex-line)}.exhibit-nav a{min-height:44px;display:inline-flex;align-items:center}.exhibit-workbench{font-size:.8rem;gap:.5rem}.exhibit-kicker{font:.75rem var(--serif);letter-spacing:.2em;color:#936539;margin:0 0 1.5rem}.exhibition-page h2{font:clamp(2rem,3.5vw,3.4rem)/1.55 var(--serif);letter-spacing:.04em;margin:0}
+.exhibit-intro{padding:4rem 0 2rem;text-align:center}.exhibit-intro>p:not(.exhibit-kicker){font-size:.9rem;line-height:2.1;color:var(--ex-muted);margin-top:1.3rem}.intro-line{display:block;height:3rem;width:1px;background:#ad875b80;margin:2rem auto 0}.exhibit-rows{padding-bottom:2rem}.exhibit-row{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;padding:2.8rem 0;border-bottom:1px solid var(--ex-line);align-items:center}.exhibit-row:last-child{border-bottom:0}
+.exhibit-card{display:block;position:relative;isolation:isolate;overflow:hidden;width:100%;aspect-ratio:1.1;border:1px solid #a7885555;background:#ddcaa6 url('/images/scroll/background.webp') center/cover;padding:0;text-align:left;color:var(--ex-ink);font-family:inherit;box-shadow:0 15px 30px #654b2110}.exhibit-card:after{content:'';position:absolute;inset:.7rem;border:1px solid #95784e55;pointer-events:none}.artwork-number{position:absolute;left:1.5rem;top:1.6rem;font-size:.7rem;letter-spacing:.12em;z-index:2}.artwork-glyph{position:absolute;right:9%;top:12%;font:clamp(6rem,12vw,11rem) KaiTi,serif;color:#705b331d}.exhibit-card img{position:absolute;width:112%;max-width:none;left:-6%;height:88%;top:6%;object-fit:contain;transition:transform .7s ease}.exhibit-card:hover img{transform:scale(1.035)}.artwork-caption{position:absolute;left:1.5rem;right:1.5rem;bottom:1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:.75rem;z-index:2}.artwork-mountain{background-color:#c0c9b3;background-blend-mode:multiply}.artwork-mountain img{width:125%;height:115%;left:-12%;top:5%}.artwork-flower img{width:108%;height:115%;top:4%;left:5%}.artwork-cloudscape img{width:130%;left:-16%;height:83%;top:5%}.artwork-distance img{width:160%;height:110%;left:-30%;top:3%}
+.exhibit-copy{position:relative;padding:.5rem .3rem}.exhibit-copy .exhibit-kicker{display:flex;align-items:center;gap:1.3rem;margin-bottom:1.2rem}.copy-index{font:1rem Georgia,serif;color:#a17f51;border-right:1px solid #a17f5166;padding-right:1.3rem}.copy-rule{display:block;width:3rem;height:1px;background:#a67844;margin:1.6rem 0}.exhibit-copy>p:not(.exhibit-kicker){font-size:.9rem;line-height:2.2;color:var(--ex-muted);margin:0 0 1rem;max-width:29rem}.copy-detail{border-top:1px solid var(--ex-line);padding-top:1.3rem;margin-top:1.8rem}.copy-detail>span{font-size:.65rem;color:#967649}.copy-detail p{font-size:.75rem;color:var(--ex-muted);line-height:1.8;margin:.6rem 0 0}.copy-seal{display:block;margin:1.6rem 0 0 auto;width:2rem;height:2.4rem;border:1px solid #a15d43;color:#a15d43;text-align:center;font:1.5rem/2.2rem KaiTi,serif;outline:1px solid #a15d4344;outline-offset:3px;transform:rotate(-4deg)}
+.exhibit-method{text-align:center;padding:4rem 0;border-top:1px solid var(--ex-line)}.exhibit-method h2{font-size:clamp(1.6rem,3vw,2.7rem)}.exhibit-method>p:not(.exhibit-kicker){font-size:.9rem;line-height:2.1;color:var(--ex-muted);margin:1.5rem 0}.exhibit-enter{display:inline-flex;gap:1.3rem;align-items:center;min-height:3.4rem;background:var(--ex-green);border:1px solid #a68a54;color:#f1e2c3;padding:.9rem 1.3rem;font-size:.85rem;margin-top:1rem}.exhibit-enter:hover{background:#234236}.exhibit-footer{border-top:1px solid var(--ex-line);padding:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--ex-muted)}.exhibit-footer p{font:.75rem var(--serif)}.exhibit-footer>span{font:.65rem var(--mono);display:flex;gap:1.5rem;align-items:center}.exhibit-footer a{min-height:44px;display:inline-flex;align-items:center}.exhibition-page :is(a,button):focus-visible{outline:2px solid #975438;outline-offset:5px}.exhibition-page section[id]{scroll-margin-top:2rem}
+.exhibit-overlay{position:fixed;inset:0;z-index:40;background:#25251ed1;backdrop-filter:blur(5px)}.exhibit-dialog{position:fixed;z-index:41;left:50%;top:50%;transform:translate(-50%,-50%);width:min(90vw,44rem);max-height:90svh;overflow:auto;padding:1.5rem;background:#eddec2;color:#533e2b;border:1px solid #bda271}.exhibit-close{position:absolute;right:.8rem;top:.8rem;width:44px;height:44px;display:grid;place-items:center;background:#eddec2;border:1px solid #aa9060;color:#533e2b;z-index:2}.exhibit-dialog-art{height:clamp(12rem,35vh,23rem);background:url('/images/scroll/background.webp') center/cover;margin-bottom:1.8rem;overflow:hidden}.exhibit-dialog-art img{width:100%;height:100%;object-fit:contain}.exhibit-dialog h2{font:1.8rem var(--serif);margin:1rem 0}.exhibit-dialog p{line-height:2;font-size:.9rem}.exhibit-dialog .exhibit-detail{font-size:.75rem;border-top:1px solid #a1845355;padding-top:1rem}.exhibit-dialog button:focus-visible{outline:2px solid #975438;outline-offset:3px}
+@media(min-width:768px){.exhibit-brand span{display:inline}.exhibit-nav nav{order:initial;width:auto;border:0;gap:1.5rem}.exhibit-intro{padding:5rem 0 1rem}.exhibit-row{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:5%;padding:4.5rem 0}.exhibit-row-reverse{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}.exhibit-row-reverse .exhibit-card{grid-column:2;grid-row:1}.exhibit-row-reverse .exhibit-copy{grid-column:1;grid-row:1}.exhibit-card{aspect-ratio:.95}.exhibit-method{padding:5rem 0}.exhibit-copy h2{font-size:clamp(2rem,3.3vw,3.2rem)}}
+@media(min-width:1024px){.exhibit-row{gap:9%;padding:5rem 0}.exhibit-card{aspect-ratio:1.06}.exhibit-copy{padding:1rem 0}.copy-rule{margin:2rem 0}.exhibit-copy>p:not(.exhibit-kicker){font-size:.95rem}.exhibit-rows{padding-bottom:4rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.exhibit-card img{transition:none}.exhibit-card:hover img{transform:none}}
+
+/* Original mural details retain their complete composition. */
+.exhibit-card.mural-card {
+  aspect-ratio: auto;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #142226ed;
+  border-color: #c7a56b88;
+  color: #fff;
+}
+.mural-card:after { inset: .45rem; border-color: #c7a56b44; }
+.mural-card .artwork-number, .mural-card .artwork-caption {
+  position: static;
+  color: #fff;
+}
+.exhibit-card.mural-card img {
+  position: static;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 562 / 253;
+  object-fit: contain;
+}
+.exhibit-card.mural-card:hover img { transform: none; }
+.exhibit-card.mural-card:hover { border-color: #edcf94; }
+.mural-card .artwork-caption { font-size: .8rem; line-height: 1.6; }
+.mural-source { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; font-size: .75rem; line-height: 1.7; text-decoration: underline; text-underline-offset: .25em; }
+.mural-source svg { flex-shrink: 0; }
+.exhibit-dialog-art { height: auto; background: #142226; }
+.exhibit-dialog-art img { display: block; height: auto; }
+@media (min-width: 1024px) {
+  .exhibit-rows { max-width: 1480px; }
+  .exhibit-row { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 5%; }
+  .exhibit-row-reverse { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
+  .exhibit-dialog { width: min(92vw, 68rem); }
+}
+
+/* Silk-mounted handscroll with wooden rollers, independent of the text column. */
+.exhibit-card.mural-card.mural-scroll {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+  padding: .75rem .65rem 0;
+  gap: 0;
+}
+.exhibit-card.mural-scroll:after { display: none; }
+.mural-scroll-mount {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: clamp(.9rem, 1.7vw, 1.6rem) clamp(.85rem, 2.2vw, 2rem);
+  background:
+    linear-gradient(90deg, #4b301c55, transparent 5%, transparent 95%, #4b301c66),
+    repeating-linear-gradient(0deg, #f8e7bf18 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, #75532e0d 0 1px, transparent 1px 4px),
+    linear-gradient(115deg, #ccaf7c, #e9d5a6 38%, #d4b882 78%, #baa073);
+  border-block: 1px solid #f0dcb19c;
+  box-shadow: 0 16px 26px #02090b55, inset 0 2px 5px #fff0c640, inset 0 -2px 5px #5d3e2733;
+}
+.mural-scroll-mount:before, .mural-scroll-mount:after {
+  content: '';
+  position: absolute;
+  top: -.7rem;
+  bottom: -.7rem;
+  width: clamp(.65rem, 1.25vw, 1.1rem);
+  border-radius: 4px;
+  border-top: .5rem solid #38271c;
+  border-bottom: .5rem solid #38271c;
+  background: linear-gradient(90deg, #302015, #735033 24%, #b48a50 45%, #795130 62%, #38271b);
+  box-shadow: inset 0 2px #d1ac70, inset 0 -2px #b28c54, 3px 4px 7px #02090b66;
+  z-index: 3;
+  pointer-events: none;
+}
+.mural-scroll-mount:before { left: -.35rem; }
+.mural-scroll-mount:after { right: -.35rem; }
+.mural-scroll .mural-reveal { outline: 1px solid #71543499; box-shadow: 0 0 0 4px #f2dfb48c, 0 0 0 5px #84633666; }
+.mural-scroll .artwork-caption { margin: 1.65rem .4rem 0; color: #eadcc1; font-size: .75rem; letter-spacing: .04em; }
+.mural-scroll .mural-reveal-hint { margin-top: .45rem; text-align: left; padding-inline: .4rem; color: #d3be96; font-size: .7rem; }
+
+/* Keep the artwork labels on parchment while the main page uses the landscape. */
+.exhibit-main .exhibit-card { --ex-ink: #533e2b; }
+.exhibit-main :is(.exhibit-intro, .exhibit-copy, .exhibit-method) h2 {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  background: none;
+  text-shadow: none;
+}
+.exhibit-main :is(.exhibit-kicker, .copy-index, .copy-detail > span) { color: #fff; }
+.exhibit-main :is(.exhibit-intro, .exhibit-copy, .exhibit-method, .exhibit-footer) { color: var(--ex-ink); text-shadow: none; }
+.exhibit-main .copy-seal { color: #e4b48d; border-color: #e4b48d; }
+.exhibit-main :is(.intro-line, .copy-rule) { background: #d9b77599; }
+
+/* Keep the exhibition directory visible after the introductory scroll scene. */
+.exhibit-nav {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  width: 100%;
+  max-width: none;
+  padding-inline: max(5%, calc((100% - 1240px) / 2));
+  background: linear-gradient(#20150e66, #20150e80), url('/images/exhibition-nav-mural.png') center 48% / cover;
+  border-color: #d9b56899;
+  box-shadow: 0 1px 0 #ffe1a344, 0 4px 16px #38230f26;
+}
+.exhibit-nav a {
+  color: #fffdf5;
+  -webkit-text-stroke: .3px #e5bd70;
+  paint-order: stroke fill;
+  text-shadow: 0 0 2px #ffdc91, 0 0 7px #eab64f99, 0 0 14px #c68c3a66, 0 2px 3px #160e08;
+}
+.exhibit-nav .exhibit-brand { font-size: clamp(2rem, 2.6vw, 2.3rem); }
+.exhibit-nav .exhibit-brand span { font-size: .95rem; }
+.exhibit-nav nav { font-size: clamp(1.25rem, 1.65vw, 1.5rem); border-color: #d9b56866; }
+.exhibit-nav .exhibit-workbench { font-size: inherit; }
+.exhibit-nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 3px #ffe8b7, 0 0 10px #efc46ac9, 0 0 20px #d59e4b99, 0 2px 3px #160e08;
+}
+.exhibit-nav a:focus-visible { outline-color: #ffe1a3; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .exhibit-nav .exhibit-brand { gap: .65rem; }
+  .exhibit-nav .exhibit-brand span { font-size: .875rem; letter-spacing: .04em; }
+  .exhibit-nav nav { gap: 1rem; }
+}
+.exhibition-page section[id] { scroll-margin-top: 10rem; }
+@media (min-width: 768px) {
+  .exhibition-page section[id] { scroll-margin-top: 7rem; }
+}
+
+
+.exhibit-nav nav a{position:relative;min-height:60px;padding:.2rem .15rem 1.1rem;line-height:1.35;letter-spacing:.03em;-webkit-text-stroke:0}
+.exhibit-nav nav a::after{content:'';position:absolute;left:50%;bottom:.1rem;width:calc(100% + .5rem);max-width:7.6rem;height:1.15rem;background:url('/images/nav-cloud.svg') center/contain no-repeat;opacity:0;transform:translateX(-50%) scale(.85);transition:opacity .2s ease,transform .2s ease;transform-origin:center;filter:drop-shadow(0 0 3px #eac17966);pointer-events:none}
+.exhibit-nav nav a[aria-current]::after{opacity:1;transform:translateX(-50%) scale(1)}
+
+.damage-atlas-promo{display:grid;gap:1.4rem;margin:2rem auto 4rem;padding:2rem;border:1px solid #d0b27566;background:#17332fc9}.damage-atlas-promo h2{font-family:var(--brush);color:#f2dfb7;-webkit-text-fill-color:currentColor;background:none;font-size:clamp(1.8rem,3vw,2.7rem)}.damage-atlas-promo p:not(.exhibit-kicker){font-size:.875rem;line-height:1.9;color:#d3d4bd;margin:.8rem 0 0}.damage-atlas-promo>a{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:44px;padding:.7rem 1rem;border:1px solid #bda26799;background:#112c29;color:#f3dab0;font-size:.875rem}
+.exhibit-nav nav{flex-wrap:wrap;column-gap:clamp(.8rem,2vw,1.5rem);row-gap:0}.exhibit-nav nav a{white-space:nowrap}
+@media(min-width:768px){.damage-atlas-promo{grid-template-columns:1fr auto;align-items:center}}
+@media(min-width:768px) and (max-width:1279px){.exhibit-nav nav{order:3;width:100%;border-top:1px solid #d9b56866;justify-content:center}}
+.exhibit-panel-loading{min-height:100svh;padding-block:5rem;color:#fff}
+@media(prefers-reduced-motion:reduce){.exhibit-nav nav a::after{transition:none}}
+@media(forced-colors:active){.exhibit-nav nav a::after{display:none}.exhibit-nav nav a[aria-current]{text-decoration:underline;text-underline-offset:.4em}}
+.exhibit-main [hidden]{display:none!important}
+.exhibit-main .treasures-page{background:transparent}
+.exhibit-main .treasures-card h2{font:400 1.05rem/1.7 var(--serif);color:#fff;background:none;-webkit-text-fill-color:#fff;-webkit-text-stroke:0;filter:none;letter-spacing:0;margin:.4rem 0 0}
+.exhibit-main :is(.treasures-caption,.treasures-filters button,.treasures-search,.treasures-end){color:#fff}
+.exhibit-main .treasures-filters button[aria-pressed=true]{color:#172f2c}

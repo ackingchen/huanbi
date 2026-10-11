@@ -1,0 +1,42 @@
+.mural-reveal { display: block; width: 100%; aspect-ratio: 562 / 253; position: relative; overflow: hidden; isolation: isolate; }
+.exhibit-card.mural-card .mural-reveal img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.mural-restored-layer { z-index: 0; }
+.mural-original-layer { z-index: 1; }
+.mural-reveal[data-revealing="true"] .mural-original-layer {
+  -webkit-mask-image: radial-gradient(circle at var(--reveal-x) var(--reveal-y), transparent calc(var(--reveal-radius) * .8), #000 var(--reveal-radius));
+  mask-image: radial-gradient(circle at var(--reveal-x) var(--reveal-y), transparent calc(var(--reveal-radius) * .8), #000 var(--reveal-radius));
+}
+.mural-sand { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+.mural-reveal-hint { font-size: .75rem; color: #e6cd9a; text-align: center; line-height: 1.7; }
+.exhibit-dialog.mural-comparison-dialog { width: min(94vw, 88rem); padding: 3.8rem 1rem 1.5rem; }
+.mural-comparison { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
+.mural-comparison figure { margin: 0; min-width: 0; }
+.mural-comparison figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem; font-size: 1.125rem; margin-bottom: .8rem; }
+.mural-comparison figcaption span { font-size: .75rem; color: #79634b; }
+.mural-compare-image { position: relative; display: block; padding: 0; width: 100%; aspect-ratio: 1.7; background: #172529; border: 1px solid #b29665; cursor: zoom-in; }
+.mural-compare-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.mural-compare-image > span { display: flex; align-items: center; gap: .4rem; position: absolute; bottom: .6rem; right: .6rem; padding: .4rem .6rem; background: #101c20d9; color: #fff; font: .75rem var(--serif); }
+.mural-action { display: inline-flex; justify-content: center; align-items: center; gap: .5rem; min-width: 44px; min-height: 44px; padding: .5rem .7rem; border: 1px solid #ad906466; color: inherit; background: transparent; cursor: pointer; font: .8rem var(--serif); text-decoration: none; }
+.mural-action:hover:not(:disabled) { background: #aa824e22; border-color: #b39257; }
+.mural-action:disabled { opacity: .35; cursor: default; }
+.mural-comparison figure > .mural-action { margin-top: .65rem; }
+.mural-comparison-copy { margin-top: 1.6rem; padding-top: 1.5rem; border-top: 1px solid #ad906466; }
+.mural-comparison-copy .exhibit-kicker { margin-bottom: .8rem; }
+.mural-viewer-overlay { position: fixed; inset: 0; z-index: 50; background: #071014ed; }
+.mural-viewer { position: fixed; inset: 2svh 2vw; z-index: 51; display: flex; flex-direction: column; gap: .8rem; padding: 1rem; background: #132126; border: 1px solid #a98b54; color: #fff; }
+.mural-viewer-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.mural-viewer-heading h2 { font: 1.2rem var(--serif); margin: 0 0 .35rem; }
+.mural-viewer-heading p { margin: 0; font-size: .75rem; color: #d5c7ac; }
+.mural-viewer-tools { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.mural-viewer-tools output { min-width: 3rem; text-align: center; font: .8rem var(--mono); }
+.mural-viewer-scroll { flex: 1; min-height: 0; overflow: auto; background: #071014; overscroll-behavior: contain; }
+.mural-full-image { display: block; width: 100%; height: 100%; object-fit: contain; }
+.mural-viewer-scroll.is-zoomed .mural-full-image { max-width: none; height: auto; }
+.mural-viewer :focus-visible { outline: 2px solid #f0ce89; outline-offset: 3px; }
+@media (min-width: 768px) {
+  .mural-comparison { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .exhibit-dialog.mural-comparison-dialog { width: min(94vw, 88rem); padding: 3.8rem 1.5rem 1.5rem; }
+  .mural-viewer { padding: 1.4rem; }
+}
+@media (hover: none) { .pointer-hint { display: none; } }
+@media (prefers-reduced-motion: reduce) { .mural-sand { display: none; } }

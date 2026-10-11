@@ -1,0 +1,299 @@
+.entrance {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow: hidden;
+  color: #f4e8c9;
+  background:
+    radial-gradient(ellipse at 72% 25%, #986726 0, transparent 50%),
+    linear-gradient(165deg, #342f20, #795422 55%, #302f20);
+  isolation: isolate;
+  animation: entrance-show 1s both;
+}
+.entrance:after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid #dab57055;
+  pointer-events: none;
+}
+.entrance-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.7' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.5' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 3;
+}
+.entrance-landscape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.scene-leaves {
+  transform-origin: bottom;
+  animation: leaf-sway 9s ease-in-out infinite;
+}
+.scene-clouds {
+  animation: cloud-drift 16s ease-in-out infinite;
+}
+.scene-sun {
+  animation: sun-breathe 7s ease-in-out infinite;
+}
+.scene-mountains {
+  animation: mountains-rise 2s both;
+}
+.entrance-top {
+  position: absolute;
+  inset: 40px 5vw auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+}
+.entrance-top > a {
+  font-size: 1.6rem;
+  font-family: KaiTi, STKaiti, serif;
+}
+.entrance-top small {
+  font-size: 0.75rem;
+  margin-left: 1rem;
+  opacity: 0.7;
+}
+.entrance-top button {
+  border: 1px solid #e2c27f66;
+  background: #392f2044;
+  color: inherit;
+  padding: 0.7rem 1rem;
+  border-radius: 2px;
+  font-family: inherit;
+  min-height: 44px;
+}
+.entrance-copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 6rem 1rem 9rem;
+}
+.entrance-copy > p:first-child {
+  font-size: 0.85rem;
+  color: #e4bf72;
+  letter-spacing: 0.35em;
+  animation: title-appear 1.3s 0.3s both;
+}
+.entrance-copy h1 {
+  margin: 1rem 0;
+  display: flex;
+  gap: clamp(0.3rem, 3vw, 3rem);
+  font-family: KaiTi, STKaiti, "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: clamp(3.6rem, 11vw, 10rem);
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-shadow: 0 5px 30px #23150655;
+}
+.entrance-copy h1 span {
+  display: block;
+  animation: title-appear 1.6s both;
+}
+.entrance-copy h1 span:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.entrance-copy h1 span:nth-child(3) {
+  animation-delay: 0.36s;
+}
+.entrance-copy h1 span:nth-child(4) {
+  animation-delay: 0.54s;
+}
+.entrance-english {
+  font: 0.7rem var(--mono);
+  letter-spacing: 0.3em;
+  opacity: 0.85;
+  animation: title-appear 1.6s 0.5s both;
+}
+.entrance-description {
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  margin: 1.5rem 0;
+  color: #ede0bc;
+  animation: title-appear 1.6s 0.7s both;
+}
+.entrance-enter {
+  color: #f5e5ba;
+  background: #173d35dd;
+  border: 1px solid #d6b773;
+  padding: 0.8rem 2.6rem;
+  min-height: 50px;
+  font: 1.2rem var(--serif);
+  margin-top: 1rem;
+  box-shadow: 0 0 0 5px #c7a45e22;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+  animation: title-appear 1.6s 0.9s both;
+}
+.entrance-enter:hover {
+  background: #28594c;
+  transform: translateY(-3px);
+}
+.entrance-enter span {
+  margin-left: 1rem;
+}
+.entrance-bottom {
+  position: absolute;
+  bottom: 38px;
+  left: 5vw;
+  right: 5vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  opacity: 0.8;
+}
+.entrance-dust {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.entrance-dust i {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #e9c879;
+  box-shadow: 0 0 8px #ffd790;
+  animation: dust-rise 9s linear infinite;
+}
+.entrance-leaving {
+  pointer-events: none;
+  animation: entrance-exit 0.85s forwards;
+}
+.entrance-replay {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 15;
+  border: 1px solid var(--line);
+  background: var(--p);
+  color: var(--ink);
+  border-radius: 2rem;
+  padding: 0.75rem 1rem;
+  min-height: 44px;
+  font: 0.8rem var(--serif);
+  box-shadow: 0 3px 15px #0001;
+}
+.entrance button:focus-visible {
+  outline: 2px solid #fff1c4;
+  outline-offset: 5px;
+}
+@keyframes title-appear {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+@keyframes leaf-sway {
+  50% {
+    transform: rotate(1.5deg) scale(1.025);
+  }
+}
+@keyframes cloud-drift {
+  50% {
+    transform: translateX(30px);
+  }
+}
+@keyframes sun-breathe {
+  50% {
+    opacity: 0.65;
+  }
+}
+@keyframes mountains-rise {
+  from {
+    transform: translateY(90px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes dust-rise {
+  0% {
+    opacity: 0;
+    transform: translate(0, 70px);
+  }
+  30% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(45px, -110px);
+  }
+}
+@keyframes entrance-exit {
+  to {
+    opacity: 0;
+    transform: scale(1.07);
+    filter: blur(10px);
+    visibility: hidden;
+  }
+}
+@keyframes entrance-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  .entrance-top small {
+    display: none;
+  }
+  .entrance-bottom span:last-child {
+    display: none;
+  }
+  .entrance-copy {
+    padding-bottom: 8rem;
+  }
+  .entrance-english {
+    font-size: 0.55rem;
+    letter-spacing: 0.16em;
+  }
+  .entrance-description {
+    font-size: 0.8rem;
+  }
+  .entrance-landscape {
+    width: 180%;
+    max-width: none;
+    left: -40%;
+  }
+  .entrance-top {
+    top: 32px;
+  }
+  .entrance-copy h1 {
+    font-size: clamp(3.4rem, 13vw, 6rem);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .entrance *,
+  .entrance {
+    animation: none !important;
+    transition: none !important;
+  }
+  .entrance-leaving {
+    opacity: 0;
+  }
+}

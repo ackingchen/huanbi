@@ -1,0 +1,18 @@
+.restoration-progress{margin:1.2rem .3rem .2rem;padding:1.2rem 1rem;border:1px solid #dbb97538;background:linear-gradient(110deg,#173832e8,#0b2429ed);border-radius:.5rem;box-shadow:inset 0 1px #f6ddb90b}
+.restoration-progress-heading{display:flex;align-items:center;gap:.8rem;min-height:5.5rem}
+.restoration-seal{flex-shrink:0;display:grid;place-items:center;width:2.5rem;height:2.5rem;border:1px solid #d8b57285;color:#efcc91;font:1.4rem var(--serif);transform:rotate(-5deg);box-shadow:inset 0 0 0 3px #173832,inset 0 0 0 4px #d8b57233}
+.restoration-verse{min-width:0;animation:verse-arrive .75s ease both}
+.restoration-verse h2{margin:0;color:#f5dfb5;font:400 clamp(1.05rem,2vw,1.35rem)/1.6 var(--serif);letter-spacing:.08em}
+.restoration-verse p{margin:.3rem 0 0;color:#c7cbb8;font-size:.875rem;line-height:1.8}
+.restoration-ellipsis{color:#dbb975;animation:verse-breathe 2s ease-in-out infinite}
+.restoration-state{display:none;flex-shrink:0;margin-left:auto;font-size:.75rem;letter-spacing:.12em;color:#d7bd8d}
+.restoration-track{position:relative;height:3px;margin:1rem 0;background:#e5c8941c;overflow:hidden;border-radius:1rem}
+.restoration-track span{position:absolute;inset:0 auto 0 0;width:45%;background:linear-gradient(90deg,transparent,#9ea776,#f9dfa4,transparent);animation:restoration-flow 3.6s ease-in-out infinite}
+.restoration-track i{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(12.5% - 2px),#102b28 calc(12.5% - 2px),#102b28 12.5%)}
+.is-assembling .restoration-track span{width:100%;animation:verse-breathe 1.3s ease-in-out infinite;background:linear-gradient(90deg,#758e65,#e6bf7f,#fff0c1)}
+.restoration-progress-foot{display:flex;flex-wrap:wrap;gap:.4rem 1rem;justify-content:space-between;font-size:.7rem;line-height:1.7;color:#b4b9a7}
+@keyframes verse-arrive{from{opacity:0;transform:translateY(7px);filter:blur(3px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes verse-breathe{50%{opacity:.45}}
+@keyframes restoration-flow{from{transform:translateX(-110%)}to{transform:translateX(330%)}}
+@media(min-width:768px){.restoration-progress{padding:1.3rem 1.7rem}.restoration-progress-heading{min-height:4.5rem;gap:1.1rem}.restoration-state{display:block}}
+@media(prefers-reduced-motion:reduce){.restoration-progress *{animation:none!important}.restoration-track span{left:25%}.is-assembling .restoration-track span{left:0}}
