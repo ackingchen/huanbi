@@ -1,3 +1,4 @@
+import { siteUrl } from './siteUrl';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Eye, EyeOff, Layers, ShieldCheck } from 'lucide-react';
 import ExhibitNav from './components/ExhibitNav';
@@ -92,11 +93,11 @@ export default function DamageAtlas() {
           ['02', '理解材料与环境', '结合材料、温湿度和壁体情况，寻找损伤背后的因素。'],
           ['03', '以长期稳定为目标', '重视预防与监测；保护方案由专业人员评估，避免只追求画面焕新。'],
         ].map(([number, title, text]) => <div key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></div>)}</div>
-        <div className="damage-digital-note"><ShieldCheck size={22} /><p><b>数字修复，是对视觉可能性的探索。</b><span>补色与补图不等于真实文物修复，也不能消除起甲、裂隙或盐分活动。具体病害应结合现场调查与专业检测判断。</span></p><a href="/workbench">进入数字修复工作台 <ArrowUpRight size={17} /></a></div>
+        <div className="damage-digital-note"><ShieldCheck size={22} /><p><b>数字修复，是对视觉可能性的探索。</b><span>补色与补图不等于真实文物修复，也不能消除起甲、裂隙或盐分活动。具体病害应结合现场调查与专业检测判断。</span></p><a href={siteUrl("/workbench")}>进入数字修复工作台 <ArrowUpRight size={17} /></a></div>
       </section>
       <section className="damage-sources" aria-labelledby="damage-sources-title"><div><p className="damage-kicker">延 伸 阅 读</p><h2 id="damage-sources-title">让保护有据可循。</h2><p>本页为常见病害的概括性科普。以下资料可帮助理解壁画保护的研究方法与基本原则。</p></div><div>{atlasSources.map(source => <a key={source.href} href={source.href} target="_blank" rel="noreferrer"><span>{source.title}<small>{source.description}</small></span><ArrowUpRight size={20} /></a>)}</div></section>
     </main>
     <SeriesExplore active="damage-atlas" />
-    <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href="/">焕 壁</a><p>知其美，也知其脆弱。</p><a href="/#archive">返回丹青长廊 <ArrowUpRight size={16} /></a></footer>
+    <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href={siteUrl("/")}>焕 壁</a><p>知其美，也知其脆弱。</p><a href={siteUrl("/#archive")}>返回丹青长廊 <ArrowUpRight size={16} /></a></footer>
   </div>;
 }

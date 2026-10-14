@@ -1,7 +1,9 @@
+import { isStaticHosting, siteUrl } from './siteUrl';
 import { useEffect, useState } from "react";
 import { Button } from "./components/Button";
 import { Settings, ShieldCheck, LogOut, Save, KeyRound } from "lucide-react";
 async function request(path, options = {}) {
+  if (isStaticHosting) throw new Error("在线展示版未连接后台服务，暂不支持管理配置。");
   const response = await fetch("/api/admin/" + path, {
     ...options,
     headers: { "Content-Type": "application/json", ...options.headers },
@@ -102,10 +104,10 @@ export default function Admin() {
   return (
     <div className="app admin-app">
       <header>
-        <a className="brand" href="/">
+        <a className="brand" href={siteUrl("/")}>
           <b>焕</b>焕壁<small>管理工作室</small>
         </a>
-        <a className="nav-cta" href="/workbench">
+        <a className="nav-cta" href={siteUrl("/workbench")}>
           返回修复工作台 ↗
         </a>
       </header>
@@ -138,7 +140,7 @@ export default function Admin() {
           </p>
         )}
         {!session ? (
-          <p role="status">正在连接后台…</p>
+          <p role="status">{error ? '后台服务未连接' : '正在连接后台…'}</p>
         ) : !session.authenticated ? (
           <form className="card login-card" onSubmit={login}>
             <KeyRound />

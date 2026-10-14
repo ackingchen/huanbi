@@ -1,3 +1,4 @@
+import { isStaticHosting, siteUrl } from './siteUrl';
 import Exhibition from "./Exhibition";
 import Admin from "./Admin";
 import ExhibitNav from "./components/ExhibitNav";
@@ -100,7 +101,7 @@ function App() {
     setError('');
     const importMural = async () => {
       try {
-        const { default: collection } = await import('./treasures.json');
+        const { default: collection } = await import('./treasureCollection.js');
         if (controller.signal.aborted) return;
         const item = collection.find(item => String(item.id) === treasureId);
         if (!item) throw new Error('未找到这幅珍藏壁画，请从千壁藏珍重新选用。');
@@ -120,6 +121,10 @@ function App() {
   }, [treasureId]);
   const generate = async () => {
     if (!file || busy || importing) return;
+    if (isStaticHosting) {
+      setError('当前为在线展示版，尚未连接修复服务。可浏览、上传和预览壁画，AI 修复需部署后端服务。');
+      return;
+    }
     setError("");
     setResult("");
     setCompare(false);
@@ -237,7 +242,7 @@ function App() {
         </section>
       </main>
       <SeriesExplore active="workbench" />
-      <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href="/">焕 壁</a><p>一 壁 千 年 · 一 眼 新 生</p><span>© 2026 HUANBI <a href="/admin">管理后台 ↗</a></span></footer>
+      <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href={siteUrl("/")}>焕 壁</a><p>一 壁 千 年 · 一 眼 新 生</p><span>© 2026 HUANBI <a href={siteUrl("/admin")}>管理后台 ↗</a></span></footer>
     </div>
   );
 }

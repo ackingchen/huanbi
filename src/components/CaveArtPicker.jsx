@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
-import collection from '../treasures.json';
+import collection from '../treasureCollection.js';
 import './CaveArtPicker.css';
 
 const categories=['全部',...new Set(collection.map(item=>item.category))];

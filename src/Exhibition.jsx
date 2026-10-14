@@ -1,3 +1,4 @@
+import { siteUrl } from './siteUrl';
 import { lazy, memo, Suspense, useEffect, useLayoutEffect, useState, useTransition, ViewTransition } from 'react';
 import { useSiteNavigation } from './components/SiteRouter';
 import ScrollScene from './components/ScrollScene';
@@ -73,7 +74,7 @@ export default function Exhibition() {
       </ViewTransition>
       </Suspense>
       <SeriesExplore active={tab} />
-      <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href="#top">焕 壁</a><p>一 壁 千 年 · 一 眼 新 生</p><span>© 2026 HUANBI <a href="/admin">管理后台 ↗</a></span></footer>
+      <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href="#top">焕 壁</a><p>一 壁 千 年 · 一 眼 新 生</p><span>© 2026 HUANBI <a href={siteUrl("/admin")}>管理后台 ↗</a></span></footer>
     </main>
   </div>;
 }

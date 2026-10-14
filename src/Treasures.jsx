@@ -1,7 +1,8 @@
+import { siteUrl } from './siteUrl';
 import { useId, useMemo, useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { ArrowUpRight, Search, X, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
-import collection from './treasures.json';
+import collection from './treasureCollection.js';
 import LazyMuralImage from './components/LazyMuralImage';
 import MasonryGrid from './components/ui/masonry-grid';
 import './Treasures.css';
@@ -32,7 +33,7 @@ export default function Treasures() {
               opener.current.focus({ preventScroll: true });
             }
           }} onKeyDown={e => {if (e.key === 'ArrowLeft') change(-1);if(e.key === 'ArrowRight') change(1);}}>
-            {selected && <><Dialog.Close className="treasures-close" aria-label="关闭大图"><X/></Dialog.Close><div className="treasures-full-image"><img src={selected.image} alt={selected.title}/></div><div className="treasures-dialog-copy"><p className="treasures-kicker">{selected.category} / NO. {selected.id}</p><Dialog.Title>{selected.title}</Dialog.Title><Dialog.Description>图像归类与题名依据本地收藏资料。{!selected.named && '原图未附题名，以分类与展品编号标识。'}</Dialog.Description><p className="treasures-source">原文件：{selected.source}</p><div className="treasures-dialog-actions"><div className="treasures-dialog-paging"><button onClick={() => change(-1)} aria-label="上一幅"><ChevronLeft/>上一幅</button><span>{index+1} / {filtered.length}</span><button onClick={() => change(1)} aria-label="下一幅">下一幅<ChevronRight/></button></div><div className="treasures-dialog-links"><a href={selected.image} target="_blank" rel="noreferrer">打开大图 <ArrowUpRight size={16}/></a><a className="treasures-restore-link" href={`/workbench?treasure=${encodeURIComponent(selected.id)}`}><Sparkles size={16}/>前往焕新之意修复</a></div></div></div></>}
+            {selected && <><Dialog.Close className="treasures-close" aria-label="关闭大图"><X/></Dialog.Close><div className="treasures-full-image"><img src={selected.image} alt={selected.title}/></div><div className="treasures-dialog-copy"><p className="treasures-kicker">{selected.category} / NO. {selected.id}</p><Dialog.Title>{selected.title}</Dialog.Title><Dialog.Description>图像归类与题名依据本地收藏资料。{!selected.named && '原图未附题名，以分类与展品编号标识。'}</Dialog.Description><p className="treasures-source">原文件：{selected.source}</p><div className="treasures-dialog-actions"><div className="treasures-dialog-paging"><button onClick={() => change(-1)} aria-label="上一幅"><ChevronLeft/>上一幅</button><span>{index+1} / {filtered.length}</span><button onClick={() => change(1)} aria-label="下一幅">下一幅<ChevronRight/></button></div><div className="treasures-dialog-links"><a href={selected.image} target="_blank" rel="noreferrer">打开大图 <ArrowUpRight size={16}/></a><a className="treasures-restore-link" href={siteUrl(`/workbench?treasure=${encodeURIComponent(selected.id)}`)}><Sparkles size={16}/>前往焕新之意修复</a></div></div></div></>}
           </Dialog.Content></Dialog.Portal>
         </Dialog.Root>
         {filtered.length === 0 && <div className="treasures-empty"><p>暂未找到相关壁画</p><button onClick={() => {setQuery('');setCategory('全部');}}>查看全部珍藏</button></div>}

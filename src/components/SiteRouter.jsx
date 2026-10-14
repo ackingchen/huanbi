@@ -1,10 +1,11 @@
+import { routePath, siteUrl } from '../siteUrl';
 import { Component, createContext, Suspense, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState, useTransition, ViewTransition } from 'react';
 import ExhibitNav from './ExhibitNav';
 import '../page-transitions.css';
 
 const NavigationContext = createContext(null);
 const publicPaths = new Set(['/', '/workbench', '/cave', '/damage-atlas', '/admin']);
-const normalizePath = path => path.replace(/\/$/, '') || '/';
+const normalizePath = routePath;
 const readLocation = revision => ({
   pathname: normalizePath(location.pathname), href: location.href,
   hash: location.hash, revision,
@@ -20,7 +21,7 @@ class RouteFailure extends Component {
   static getDerivedStateFromError() { return { failed: true }; }
   render() {
     if (!this.state.failed) return this.props.children;
-    return <div className="exhibition-page exhibit-main site-route-error"><ExhibitNav /><main><h1>画卷暂未展开</h1><p>页面未能载入，请检查网络后重试。</p><button onClick={() => location.reload()}>重新载入</button><a href="/#archive">返回丹青长廊</a></main></div>;
+    return <div className="exhibition-page exhibit-main site-route-error"><ExhibitNav /><main><h1>画卷暂未展开</h1><p>页面未能载入，请检查网络后重试。</p><button onClick={() => location.reload()}>重新载入</button><a href={siteUrl("/#archive")}>返回丹青长廊</a></main></div>;
   }
 }
 

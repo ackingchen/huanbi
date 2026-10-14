@@ -5,7 +5,7 @@ import { exhibits } from './exhibits';
 import { createCave } from './caveScene';
 import { createCaveAudio } from './caveAudio';
 import CaveArtPicker from './components/CaveArtPicker';
-import collection from './treasures.json';
+import collection from './treasureCollection.js';
 import './Cave.css';
 import SeriesExplore from './components/SeriesExplore';
 

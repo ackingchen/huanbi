@@ -1,5 +1,6 @@
+import { routePath, siteUrl } from './siteUrl';
 (() => {
-  if (location.pathname.startsWith('/admin')) return;
+  if (routePath(location.pathname) === '/admin') return;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const scenes = {
     home: ['壁上重生', '一壁千年，一眼新生。', '壁'],
@@ -11,7 +12,7 @@
   };
   const sceneOf = href => {
     const url = new URL(href, location.href);
-    const route = url.pathname.replace(/\/$/, '') || '/';
+    const route = routePath(url.pathname);
     return route === '/' ? (!url.hash || url.hash === '#top' ? 'home' : url.hash === '#treasures' ? 'treasures' : 'archive') : route.slice(1);
   };
   const curtain = document.createElement('div');
@@ -34,7 +35,7 @@
   const caption = curtain.querySelector('.huanbi-turn-caption');
   let active = null;
 
-  for (const file of ['/images/scroll/background.webp', '/images/huanbi-atlas-scroll.svg?v=20261012-deep-wear-5', '/images/scroll/cloud.webp', '/images/scroll/apsara.webp', '/images/scroll/lotusLeft.webp']) {
+  for (const file of [siteUrl('/images/scroll/background.webp'), siteUrl('/images/huanbi-atlas-scroll.svg?v=20261012-deep-wear-5'), siteUrl('/images/scroll/cloud.webp'), siteUrl('/images/scroll/apsara.webp'), siteUrl('/images/scroll/lotusLeft.webp')]) {
     const image = new Image(); image.src = file;
   }
   const animate = (job, element, frames, options) => {

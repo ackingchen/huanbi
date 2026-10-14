@@ -47,3 +47,11 @@ React + Vite，Radix Dialog/Slot、CVA、clsx/tailwind-merge 的 shadcn 组件�
 
 ## 仓库内容
 仓库仅包含应用源码、运行素材、依赖锁文件和启动说明。本地配置、密钥、测试脚本、截图、构建产物、演示压缩包及开发记录不纳入版本控制。`.env.example` 仅提供空密钥配置模板。
+
+## GitHub Pages 部署
+
+仓库推送到 `main` 后，GitHub Actions 自动构建并部署前端到 https://ackingchen.github.io/huanbi/ 。仓库 Settings → Pages 的 Source 使用 GitHub Actions。
+
+`npm run build:pages` 生成静态展示版，默认路径为 `/huanbi/`，可通过 `PAGES_BASE_PATH` 覆盖。构建会生成工作台、洞窟、病害图鉴和后台的独立入口，支持直接访问与刷新；普通 `npm run build` 保留根路径部署。
+
+GitHub Pages 不运行 Node 服务：展览、藏品、洞窟、病害图鉴以及本地上传预览可以使用；AI 修复和后台管理需另外部署 `server/`，静态版会显示服务尚未连接的提示。任何 API 密钥都不应添加到前端或 Actions 构建变量。

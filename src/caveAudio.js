@@ -1,3 +1,4 @@
+import { siteUrl } from './siteUrl';
 function noiseBuffer(ctx, seconds = 2) {
   const buffer = ctx.createBuffer(1, ctx.sampleRate * seconds, ctx.sampleRate);
   const data = buffer.getChannelData(0);
@@ -37,7 +38,7 @@ export function createCaveAudio() {
       active = true;
       try {
         await ctx.resume();
-        loading ||= fetch('/audio/cave-dripping-water.wav').then(response => {
+        loading ||= fetch(siteUrl('/audio/cave-dripping-water.wav')).then(response => {
           if (!response.ok) throw new Error('水滴音频加载失败，请重试');
           return response.arrayBuffer();
         }).then(bytes => ctx.decodeAudioData(bytes)).catch(error => { loading = null; throw error; });

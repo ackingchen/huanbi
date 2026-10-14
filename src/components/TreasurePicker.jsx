@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Loader2, Search, X } from 'lucide-react';
-import collection from '../treasures.json';
+import collection from '../treasureCollection.js';
 import { loadTreasureFile } from '../treasureFile';
 import './TreasurePicker.css';
 
