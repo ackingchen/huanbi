@@ -4,6 +4,7 @@ import ExhibitNav from './components/ExhibitNav';
 import DamageSpecimen from './components/DamageSpecimen';
 import { atlasSources, diseases } from './muralDiseases';
 import './DamageAtlas.css';
+import SeriesExplore from './components/SeriesExplore';
 
 const sections = [['appearance', '如何辨认'], ['causes', '常见成因'], ['care', '保护思路']];
 const readSelection = () => diseases.find(item => `#${item.id}` === location.hash)?.id || diseases[0].id;
@@ -95,6 +96,7 @@ export default function DamageAtlas() {
       </section>
       <section className="damage-sources" aria-labelledby="damage-sources-title"><div><p className="damage-kicker">延 伸 阅 读</p><h2 id="damage-sources-title">让保护有据可循。</h2><p>本页为常见病害的概括性科普。以下资料可帮助理解壁画保护的研究方法与基本原则。</p></div><div>{atlasSources.map(source => <a key={source.href} href={source.href} target="_blank" rel="noreferrer"><span>{source.title}<small>{source.description}</small></span><ArrowUpRight size={20} /></a>)}</div></section>
     </main>
+    <SeriesExplore active="damage-atlas" />
     <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href="/">焕 壁</a><p>知其美，也知其脆弱。</p><a href="/#archive">返回丹青长廊 <ArrowUpRight size={16} /></a></footer>
   </div>;
 }

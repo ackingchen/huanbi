@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" preserveAspectRatio="none" fill="none" stroke="#d4ae73" stroke-width="1.1" opacity=".7">
+<g id="corner" stroke-linecap="round" stroke-linejoin="round">
+<path d="M27 122V50Q27 27 50 27H145M36 122V57Q36 36 57 36H145"/>
+<path d="M44 95Q43 60 73 55Q93 52 103 64Q111 74 101 79Q88 85 85 69M47 66Q66 47 82 45M54 84Q64 73 72 76Q79 80 73 87Q68 94 61 87"/>
+<path d="M28 50Q11 53 16 67Q22 78 30 70M50 28Q53 11 67 16Q78 22 70 30"/>
+<path d="M50 50l5-5 5 5-5 5Z" fill="#d4ae73" stroke="none"/>
+</g>
+<use href="#corner" transform="translate(1000 0) scale(-1 1)"/><use href="#corner" transform="translate(0 640) scale(1 -1)"/><use href="#corner" transform="translate(1000 640) scale(-1 -1)"/>
+<path d="M178 28H430M570 28H822M178 612H448M552 612H822" opacity=".45"/>
+<path d="M448 28Q467 13 483 28Q491 8 500 18Q509 8 517 28Q533 13 552 28M460 31Q482 39 500 31Q518 39 540 31M466 611Q484 595 500 606Q516 595 534 611M479 615H521"/>
+<path d="M29 150V214M29 424V489M971 150V214M971 424V489" opacity=".4"/>
+<path d="M29 306l7 14-7 14-7-14ZM971 306l7 14-7 14-7-14Z" opacity=".65"/>
+</svg>

@@ -1,0 +1,669 @@
+
+/* Exhibition typography and viewer layout from the revised demo. */
+.scroll-navigation a {
+  align-items: center;
+  min-height: 44px;
+  font-size: 1.625rem;
+  display: flex;
+}
+.scroll-brand {
+  font-family: KaiTi,STKaiti,serif;
+  font-size: 2.5rem!important;
+}
+.scroll-brand small {
+  font-family: var(--serif);
+  letter-spacing: .13em;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+.scroll-title>p:first-child {
+  letter-spacing: .3em;
+  margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.scroll-title>span {
+  font: 1.625rem var(--mono);
+  letter-spacing: .16em;
+}
+.scroll-invitation {
+  letter-spacing: .12em;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.scroll-chapter p {
+  max-width: 100%;
+  margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+.scroll-bottom {
+  z-index: 12;
+  letter-spacing: .15em;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  position: absolute;
+  bottom: 2rem;
+  left: 5vw;
+  right: 5vw;
+}
+@media (width<=767px) {
+.scroll-brand {
+  font-size: 2rem!important;
+}
+}
+@media (width<=767px) {
+.scroll-navigation a {
+  font-size: 1.125rem;
+}
+}
+@media (width<=767px) {
+.scroll-title>p:first-child {
+  font-size: 1.25rem;
+  letter-spacing: .15em;
+}
+}
+@media (width<=767px) {
+.scroll-title>span {
+  letter-spacing: .1em;
+  font-size: 1rem;
+}
+}
+@media (width<=767px) {
+.scroll-chapter p {
+  font-size: 1.25rem;
+}
+}
+@media (width<=767px) {
+.scroll-bottom {
+  gap: .8rem;
+  bottom: 1rem;
+  font-size: 1.125rem;
+}
+}
+@media (width<=767px) {
+.scroll-invitation {
+  font-size: 1.25rem;
+}
+}
+@media (width<=767px) and (height<=700px) {
+.scroll-chapter {
+  top: 40%;
+}
+}
+@media (width>=768px) and (height<=800px) {
+.scroll-chapter {
+  top: 30%;
+}
+}
+.exhibit-kicker {
+  font: 1.25rem var(--serif);
+  letter-spacing: .2em;
+  color: #936539;
+  margin: 0 0 1.5rem;
+}
+.exhibit-intro>.exhibit-kicker {
+  font-size: 1.75rem;
+  line-height: 1.6;
+}
+.exhibit-intro>p:not(.exhibit-kicker) {
+  color: var(--ex-muted);
+  margin-top: 1.3rem;
+  font-size: 1.75rem;
+  line-height: 1.8;
+}
+.exhibit-copy .exhibit-kicker {
+  align-items: center;
+  gap: 1.3rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  font-size: 1.75rem;
+  line-height: 1.6;
+}
+.exhibit-copy>.exhibit-kicker .copy-index {
+  font-size: inherit;
+}
+.copy-index {
+  color: #a17f51;
+  border-right: 1px solid #a17f5166;
+  padding-right: 1.3rem;
+  font: 1.25rem Georgia,serif;
+}
+.exhibit-copy>p:not(.exhibit-kicker) {
+  color: var(--ex-muted);
+  max-width: 100%;
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.85;
+}
+.copy-detail>span {
+  color: #967649;
+  font-size: 1.25rem;
+}
+.copy-detail p {
+  color: var(--ex-muted);
+  margin: .6rem 0 0;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+.copy-seal {
+  color: #a15d43;
+  text-align: center;
+  outline-offset: 3px;
+  border: 1px solid #a15d43;
+  outline: 1px solid #a15d4344;
+  width: 2.75rem;
+  height: 3.25rem;
+  margin: 1.6rem 0 0 auto;
+  font: 2rem/1 KaiTi,serif;
+  display: grid;
+  place-items: center;
+  transform: rotate(-4deg);
+}
+.exhibit-method h2 {
+  font-size: clamp(2rem,3.5vw,3.5rem);
+}
+.exhibit-method>p:not(.exhibit-kicker) {
+  color: var(--ex-muted);
+  margin: 1.5rem 0;
+  font-size: 1.75rem;
+  line-height: 1.8;
+}
+.exhibit-enter {
+  background: var(--ex-green);
+  color: #f1e2c3;
+  border: 1px solid #a68a54;
+  align-items: center;
+  gap: 1.3rem;
+  min-height: 3.4rem;
+  margin-top: 1rem;
+  padding: .9rem 1.3rem;
+  font-size: 1.25rem;
+  display: inline-flex;
+}
+.exhibit-footer p {
+  font: 1.125rem var(--serif);
+}
+.exhibit-footer>span {
+  font: 1.125rem var(--mono);
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+}
+@media (width>=1024px) {
+.exhibit-copy>p:not(.exhibit-kicker) {
+  font-size: 1.5rem;
+}
+}
+.mural-source {
+  text-underline-offset: .25em;
+  align-items: center;
+  gap: .4rem;
+  min-height: 44px;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-decoration: underline;
+  display: inline-flex;
+}
+.mural-scroll .artwork-caption {
+  color: #eadcc1;
+  letter-spacing: .04em;
+  margin: 1.65rem .4rem 0;
+  font-size: 1.75rem;
+}
+.mural-scroll .mural-reveal-hint {
+  text-align: left;
+  color: #d3be96;
+  margin-top: .45rem;
+  padding-inline: .4rem;
+  font-size: 1.75rem;
+}
+.exhibit-nav .exhibit-brand span {
+  font-size: 1.125rem;
+}
+@media (width>=768px) and (width<=1023px) {
+.exhibit-nav .exhibit-brand span {
+  letter-spacing: .04em;
+  font-size: 1rem;
+}
+}
+.damage-atlas-promo p:not(.exhibit-kicker) {
+  color: #d3d4bd;
+  margin: .8rem 0 0;
+  font-size: 1.5rem;
+  line-height: 1.9;
+}
+.damage-atlas-promo>a {
+  color: #f3dab0;
+  background: #112c29;
+  border: 1px solid #bda26799;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  min-height: 44px;
+  padding: .7rem 1rem;
+  font-size: 1.25rem;
+  display: inline-flex;
+}
+.exhibit-footer>.exhibit-brand {
+  font-size: 2.5rem;
+}
+@media (width<=767px) {
+.exhibit-kicker,.copy-index,.copy-detail>span,.copy-detail p,.mural-source {
+  font-size: 1rem;
+}
+}
+@media (width<=767px) {
+.exhibit-intro>.exhibit-kicker {
+  font-size: 1.25rem;
+}
+}
+@media (width<=767px) {
+.exhibit-copy>.exhibit-kicker,.mural-scroll .artwork-caption {
+  font-size: 1.375rem;
+}
+}
+@media (width<=767px) {
+.exhibit-intro>p:not(.exhibit-kicker),.exhibit-copy>p:not(.exhibit-kicker),.damage-atlas-promo p:not(.exhibit-kicker),.exhibit-method>p:not(.exhibit-kicker),.damage-atlas-promo>a,.exhibit-enter {
+  font-size: 1.125rem;
+}
+}
+@media (width<=767px) {
+.mural-scroll .mural-reveal-hint {
+  font-size: 1.375rem;
+}
+}
+@media (width<=767px) {
+.exhibit-footer p,.exhibit-footer>span {
+  font-size: 1rem;
+}
+}
+@media (width<=767px) {
+.exhibit-footer>.exhibit-brand {
+  font-size: 2rem;
+}
+}
+.mural-comparison-dialog .mural-comparison figcaption {
+  flex-wrap: wrap;
+  font-size: 1.75rem;
+  line-height: 1.6;
+}
+.mural-comparison-dialog .mural-comparison figcaption span {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.mural-comparison-dialog .mural-compare-image>span,.mural-comparison-dialog .mural-action {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.mural-comparison-dialog .mural-compare-image>span svg,.mural-comparison-dialog .mural-action svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+.mural-comparison-dialog .mural-comparison-copy>.exhibit-kicker {
+  font-size: 1.75rem;
+  line-height: 1.6;
+}
+.mural-comparison-dialog .mural-comparison-copy>h2 {
+  font-size: clamp(2rem,3.3vw,3.2rem);
+  line-height: 1.55;
+  letter-spacing: .04em;
+}
+.mural-comparison-dialog .mural-comparison-copy>p:not(.exhibit-kicker):not(.exhibit-detail) {
+  font-size: 1.5rem;
+  line-height: 1.85;
+}
+.mural-comparison-dialog .mural-comparison-copy>.exhibit-detail,.mural-comparison-dialog .mural-source {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+@media (width<=767px) {
+.mural-comparison-dialog .mural-comparison figcaption,.mural-comparison-dialog .mural-comparison-copy>.exhibit-kicker {
+  font-size: 1.375rem;
+}
+}
+@media (width<=767px) {
+.mural-comparison-dialog .mural-comparison figcaption span,.mural-comparison-dialog .mural-comparison-copy>.exhibit-detail,.mural-comparison-dialog .mural-source {
+  font-size: 1rem;
+}
+}
+@media (width<=767px) {
+.mural-comparison-dialog .mural-compare-image>span,.mural-comparison-dialog .mural-action,.mural-comparison-dialog .mural-comparison-copy>p:not(.exhibit-kicker):not(.exhibit-detail) {
+  font-size: 1.125rem;
+}
+}
+.mural-viewer {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto auto;
+  grid-template-rows: auto minmax(0,1fr);
+  gap: 1.25rem 1rem;
+}
+.mural-viewer-heading {
+  display: contents;
+}
+.mural-viewer-heading>div {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+.mural-viewer-heading h2 {
+  font-size: clamp(2rem,3.3vw,3.2rem);
+  line-height: 1.55;
+  letter-spacing: .04em;
+}
+.mural-viewer-heading p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.mural-viewer-heading>.mural-action {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+}
+.mural-viewer-tools {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  justify-self: end;
+  justify-content: flex-end;
+  gap: .5rem;
+}
+.mural-viewer .mural-action {
+  min-width: 3.25rem;
+  min-height: 3.25rem;
+  padding: .55rem .8rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.mural-viewer .mural-action svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+.mural-viewer-tools output {
+  min-width: 3.75rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.mural-viewer-scroll {
+  grid-column: 1/-1;
+  grid-row: 2;
+  min-width: 0;
+}
+@media (width<1200px) {
+.mural-viewer {
+  grid-template-columns: minmax(0,1fr) auto;
+  grid-template-rows: auto auto minmax(0,1fr);
+  gap: 1rem;
+}
+}
+@media (width<1200px) {
+.mural-viewer-heading>.mural-action {
+  grid-column: 2;
+}
+}
+@media (width<1200px) {
+.mural-viewer-tools {
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+}
+@media (width<1200px) {
+.mural-viewer-scroll {
+  grid-row: 3;
+}
+}
+@media (width<=767px) {
+.mural-viewer-heading p {
+  font-size: 1rem;
+}
+}
+@media (width<=767px) {
+.mural-viewer .mural-action {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: .5rem .65rem;
+  font-size: 1.125rem;
+}
+}
+@media (width<=767px) {
+.mural-viewer-tools output {
+  min-width: 3.5rem;
+  font-size: 1.125rem;
+}
+}
+@media (width<=767px) {
+.mural-viewer .mural-action svg {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+}
+@media (width<=599px) {
+.mural-viewer-tools {
+  display: grid;
+  grid-template-columns: repeat(6,minmax(0,1fr));
+  justify-self: stretch;
+}
+}
+@media (width<=599px) {
+.mural-viewer-tools>:nth-child(-n+3) {
+  grid-column: span 2;
+}
+}
+@media (width<=599px) {
+.mural-viewer-tools>:nth-child(1) {
+  justify-self: start;
+}
+}
+@media (width<=599px) {
+.mural-viewer-tools>:nth-child(3) {
+  justify-self: end;
+}
+}
+@media (width<=599px) {
+.mural-viewer-tools>:nth-child(n+4) {
+  grid-column: span 3;
+  min-width: 0;
+}
+}
+.exhibit-method>.exhibit-kicker {
+  font-size: 1.75rem;
+  line-height: 1.6;
+}
+@media (width<=767px) {
+.exhibit-method>.exhibit-kicker {
+  font-size: 1.375rem;
+}
+}
+.exhibition-page>main[hidden] {
+  display: none!important;
+}
+.scroll-enter-hint {
+  display: none;
+}
+.scroll-stage[data-chapter="3"] .scroll-indicator {
+  display: none;
+}
+.scroll-stage[data-chapter="3"] .scroll-enter-hint {
+  display: inline;
+}
+@media (prefers-reduced-motion:reduce) {
+.scroll-stage .scroll-title {
+  display: none;
+}
+}
+@media (prefers-reduced-motion:reduce) {
+.scroll-stage .chapter-three {
+  display: block;
+  opacity: 1;
+  transform: none;
+}
+}
+@media (prefers-reduced-motion:reduce) {
+.scroll-stage .apsara {
+  display: block;
+}
+}
+.scroll-navigation {
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+.scroll-nav-links {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  column-gap: clamp(1rem,2vw,2rem);
+  row-gap: .25rem;
+  margin-left: auto;
+}
+.scroll-nav-links a {
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-family: var(--brush);
+  font-size: 1.625rem;
+  line-height: 1.4;
+}
+.scroll-stage .scroll-nav-links a {
+  color: #69401d;
+  background: linear-gradient(160deg,#533317 0%,#7b481b 33%,#684018 52%,#7e4a1c 69%,#523015 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px .5px #ffedba40;
+}
+.scroll-stage .scroll-nav-links a:hover {
+  color: #754619;
+  background-image: linear-gradient(160deg,#754619,#7e4a1c,#663715);
+  text-decoration: underline;
+  text-decoration-color: #94601e;
+  text-underline-offset: .3em;
+}
+@media (forced-colors:active) {
+.scroll-stage .scroll-nav-links a {
+  color: LinkText;
+  -webkit-text-fill-color: LinkText;
+  background: none;
+  text-shadow: none;
+}
+}
+@media (768px<=width<=1100px) {
+.scroll-brand small {
+  display: none;
+}
+}
+@media (768px<=width<=1100px) {
+.scroll-navigation {
+  column-gap: 1rem;
+}
+}
+@media (768px<=width<=1100px) {
+.scroll-nav-links {
+  column-gap: .75rem;
+}
+}
+@media (width<=767px) {
+.scroll-nav-links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6,minmax(0,1fr));
+  gap: .125rem .5rem;
+  margin-left: 0;
+}
+}
+@media (width<=767px) {
+.scroll-nav-links a {
+  grid-column: span 2;
+  justify-content: center;
+  font-size: 1.375rem;
+}
+}
+@media (width<=767px) {
+.scroll-nav-links a:nth-last-child(-n+2) {
+  grid-column: span 3;
+}
+}
+@media (width<=767px) {
+.scroll-title {
+  top: max(25%,10.75rem);
+}
+}
+.exhibit-main .exhibit-copy>.exhibit-kicker {
+  font-size: 2.125rem;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: .06em;
+  color: #edc17a;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 3px #21150980;
+}
+.exhibit-main .exhibit-copy>.exhibit-kicker .copy-index {
+  display: grid;
+  place-items: center;
+  flex: 0 0 3.5rem;
+  min-height: 3.5rem;
+  padding: 0;
+  border: 1px solid #cfa56a;
+  outline: 1px solid #cfa56a55;
+  outline-offset: 3px;
+  background: linear-gradient(135deg,#70492366,#33251980);
+  color: #f5d7a2;
+  font: 500 1.625rem/1.5 var(--serif);
+  letter-spacing: .04em;
+}
+.exhibit-main .copy-detail>span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: #edc17a;
+}
+.exhibit-main .exhibit-copy>.copy-seal {
+  width: 5.25rem;
+  height: 5.75rem;
+  font-size: 3.75rem;
+  line-height: 1;
+}
+@media (width<=767px) {
+.exhibit-main .exhibit-copy>.exhibit-kicker {
+  font-size: 1.625rem;
+  gap: 1rem;
+  letter-spacing: .035em;
+}
+}
+@media (width<=767px) {
+.exhibit-main .exhibit-copy>.exhibit-kicker .copy-index {
+  flex-basis: 3rem;
+  min-height: 3rem;
+  font-size: 1.375rem;
+}
+}
+@media (width<=767px) {
+.exhibit-main .copy-detail>span {
+  font-size: 1.375rem;
+}
+}
+@media (width<=767px) {
+.exhibit-main .exhibit-copy>.copy-seal {
+  width: 4.5rem;
+  height: 5rem;
+  font-size: 3.25rem;
+}
+}
+@media (forced-colors:active) {
+.exhibit-main .exhibit-copy>.exhibit-kicker,.exhibit-main .copy-detail>span {
+  color: CanvasText;
+  text-shadow: none;
+}
+}
+@media (forced-colors:active) {
+.exhibit-main .exhibit-copy>.exhibit-kicker .copy-index {
+  color: CanvasText;
+  background: Canvas;
+  border-color: CanvasText;
+  outline-color: CanvasText;
+}
+}

@@ -1,0 +1,439 @@
+/* The restoration desk: worn wood, a warm mounting surface and readable controls. */
+.workbench-page{color:#f6e8cc;background:linear-gradient(#2b211450,#211b16c9)}
+.workbench-page .workbench-content{width:90%;max-width:1240px;padding-bottom:3rem}
+.workbench-page .workbench{padding-top:3rem}
+.workbench-page .workbench-heading{margin-bottom:2.5rem}
+.workbench-page .workbench-heading .lab-kicker{display:block;font:1.25rem/1.7 var(--serif);letter-spacing:.08em;color:#e5c58f;margin-bottom:.8rem;overflow-wrap:anywhere}
+.workbench-page .workbench-heading h1{font:400 clamp(2.5rem,4.3vw,3.75rem)/1.5 var(--brush);color:#fff0cf;letter-spacing:.04em}
+.workbench-page .workbench-heading>p:last-child{font-size:1.5rem;line-height:1.85;color:#ead8b5}
+.workbench-page .upload-composer{display:flex;flex-direction:column}
+.workbench-page .composer-toolbar{order:-1;gap:1rem;padding:0 .5rem 1.5rem;align-items:center}
+.workbench-page .composer-toolbar>span{font-size:1.25rem;line-height:1.8;color:#ead4ab;min-width:0}
+.workbench-page .stage-actions{gap:.8rem;max-width:100%}
+.workbench-page .mural-scroll-mount{
+  isolation:isolate;border:0;background:none;box-shadow:none;
+  padding:2.5rem clamp(1.5rem,3.5vw,3.25rem);
+}
+.workbench-page .mural-scroll-mount::before{
+  inset:0;width:auto;height:auto;z-index:-2;border:1px solid #b38a5377;border-radius:3px;box-shadow:inset 0 0 0 8px #21140988,inset 0 0 30px #170d08aa,0 12px 26px #090b0866;
+  background:linear-gradient(100deg,#26160bb0,#75441c35,#2c1a0bb5),url('/images/materials/wood_table_worn.webp') center/cover;
+  filter:none;
+}
+.workbench-page .mural-scroll-mount::after{
+  content:"";inset:18px;width:auto;height:auto;z-index:-1;border:1px solid #b7a07899;border-radius:0;box-shadow:0 2px 8px #170d0866;pointer-events:none;
+  background:repeating-linear-gradient(0deg,#efdcb825 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,#392b2320 0 1px,transparent 1px 3px),#8a7656;
+}
+.workbench-page .restoration-scroll{--stage-height:clamp(24rem,43svh,34rem)}
+.workbench-page .restoration-scroll .upload-empty{
+  box-sizing:border-box;position:relative;isolation:isolate;height:auto;min-height:var(--stage-height);
+  background:radial-gradient(ellipse at 3% 5%,#96622f55,transparent 30%),radial-gradient(ellipse at 96% 100%,#94613450,transparent 24%),linear-gradient(100deg,#c1a37399,#ecddbeb8 18% 78%,#c0a17380),url('/images/materials/clay_plaster.webp') center/cover;
+  border:1px solid #c0a477;outline:0;
+  box-shadow:0 4px 12px #1b110980,inset 0 0 22px #8b6c2f25;padding:2rem 1rem;color:#4d351c;
+}
+.workbench-page .upload-empty::before{content:"";position:absolute;inset:7px -6px -9px 7px;z-index:-1;pointer-events:none;border:1px solid #ad905f;background:linear-gradient(110deg,#d4bf94,#b79a69);transform:rotate(.4deg);clip-path:polygon(calc(100% - 12px) 0,100% 0,100% 100%,0 100%,0 calc(100% - 15px),calc(100% - 12px) calc(100% - 15px));box-shadow:0 2px 6px #21130944}
+.workbench-page .upload-empty::after{content:"";position:absolute;inset:-8px -9px;pointer-events:none;background:url('/images/materials/corner-carving-umber.svg') left top/96px 96px no-repeat,url('/images/materials/corner-carving-umber-tr.svg') right top/96px 96px no-repeat,url('/images/materials/corner-carving-umber-bl.svg') left bottom/96px 96px no-repeat,url('/images/materials/corner-carving-umber-br.svg') right bottom/96px 96px no-repeat,url('/images/materials/lotus-crest-umber.svg') center top/156px 52px no-repeat,url('/images/materials/fret-ribbon-umber.svg') left bottom/96px 12px repeat-x}
+.workbench-page .restoration-scroll .upload-target{background:none;outline:0;box-shadow:none;gap:1rem}
+.workbench-page .upload-emblem{position:relative;width:6rem;height:6.5rem;color:#614323;border:3px double #79522e;outline:1px solid #79522e66;outline-offset:4px;border-radius:46% 46% 4px 4px;background:linear-gradient(120deg,#d6bd8c,#eedbb5 50%,#b99562);margin-bottom:.65rem;box-shadow:inset 0 0 0 5px #80572f22,0 4px 8px #4e2e1540}
+.workbench-page .upload-emblem::before{content:"";position:absolute;width:82px;height:28px;left:50%;top:-19px;transform:translateX(-50%);pointer-events:none;background:url('/images/materials/lotus-crest-umber.svg') center/contain no-repeat}
+.workbench-page .upload-emblem::after{content:"";position:absolute;inset:auto 7px 5px;height:8px;pointer-events:none;background:url('/images/materials/fret-ribbon-umber.svg') center/48px 8px repeat-x}
+.workbench-page .upload-emblem svg{width:3.25rem;height:3.25rem}
+.workbench-page .upload-target b{color:#49321c;font-size:1.75rem;line-height:1.7;text-wrap:balance}
+.workbench-page .upload-target small{color:#624624;font:1.25rem/1.8 var(--mono);overflow-wrap:anywhere}
+.workbench-page .upload-choice-divider{font-size:1.25rem;color:#684927;margin:1rem 0 1.25rem}
+.workbench-page .upload-choice-divider::before,.workbench-page .upload-choice-divider::after{background:#79522e66}
+.workbench-page :is(.stage-action,.restore-submit,.actions button,.actions a){
+  isolation:isolate;position:relative;display:inline-flex;align-items:center;justify-content:center;
+  max-width:100%;min-height:4rem;padding:1rem 1.6rem;gap:.65rem;
+  font:500 1.375rem/1.5 var(--serif);color:#4c2e15;
+  background:transparent;border:0;border-radius:0;text-decoration:none;
+  filter:drop-shadow(0 4px 5px #130f0b40);
+}
+.workbench-page :is(.stage-action,.restore-submit,.actions button,.actions a)::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  border:0;background:url('/images/huanbi-module-plaque.svg?v=20261012-1') center/100% 100% no-repeat;
+}
+.workbench-page :is(.stage-action,.restore-submit,.actions button,.actions a)>svg{width:1.5rem;height:1.5rem;flex-shrink:0}
+.workbench-page :is(.stage-action,.restore-submit,.actions button,.actions a):hover:not(:disabled){color:#38210f;background:transparent;filter:brightness(1.06) drop-shadow(0 5px 7px #130f0b50)}
+.workbench-page .restore-submit:disabled{background:transparent;color:#4c2e15;opacity:.55;cursor:not-allowed}
+.workbench-page .repair-options{gap:1.25rem;padding:2rem .5rem 0}
+.workbench-page .option-row{justify-content:flex-start;gap:.8rem}
+.workbench-page .option-label{width:7rem;font-size:1.375rem;line-height:1.7;color:#e9d3ab;text-align:left}
+.workbench-page .option-chip{isolation:isolate;position:relative;max-width:100%;min-height:4.7rem;gap:.65rem;font-size:1.375rem;line-height:1.6;border-radius:3px 15px 3px 15px;padding:1rem 2.9rem;color:#f0ddba;background:linear-gradient(115deg,#685032e8,#352617d9),url('/images/materials/wood_table_worn.webp') center/cover;border:1px solid #c0a16c88;box-shadow:inset 0 2px #ecd6a33b,inset 0 -3px #1c100c66,0 4px 8px #110b083d;transition:filter .16s,box-shadow .16s}
+.workbench-page .option-chip::before{content:"";position:absolute;inset:4px;z-index:-1;pointer-events:none;border:1px solid #dab87a66;background:url('/images/materials/plaque-cap-gold.svg') left center/34px 64px no-repeat,url('/images/materials/plaque-cap-gold-right.svg') right center/34px 64px no-repeat,url('/images/materials/fret-ribbon-gold.svg') center bottom/64px 8px repeat-x}
+.workbench-page .option-chip small{color:inherit;opacity:.9;font-size:1.125rem;line-height:1.5}
+.workbench-page .option-chip svg{width:1.35rem;height:1.35rem;flex-shrink:0}
+.workbench-page .option-chip[aria-pressed=true]{background:linear-gradient(115deg,#85623beb,#53381de5),url('/images/materials/wood_table_worn.webp') center/cover;color:#fff0cd;border-color:#edd095;box-shadow:inset 0 0 0 3px #d9b57844,0 4px 8px #110b083d}
+.workbench-page .option-chip[aria-pressed=true]::after{content:"";position:absolute;right:9px;top:9px;width:11px;height:11px;pointer-events:none;background:#a84e36;border:2px double #edc491;box-shadow:0 0 0 1px #a84e36;transform:rotate(-7deg)}
+.workbench-page .option-chip:hover:not(:disabled){filter:brightness(1.12);border-color:#e0c58a}
+.workbench-page .option-row[aria-label="文化语境"]{align-items:stretch;padding-top:.6rem}
+.workbench-page .option-row[aria-label="文化语境"] .option-label{align-self:center}
+.workbench-page .option-row[aria-label="文化语境"] .option-chip{color:#483019;padding-inline:2.2rem;background:linear-gradient(105deg,#ad8e5c70,#d7bf95c4),url('/images/materials/clay_plaster.webp') center/cover;border-color:#bba074;border-bottom:3px solid #64472b;border-radius:0;box-shadow:0 4px 8px #110b083d}
+.workbench-page .option-row[aria-label="文化语境"] .option-chip::before{inset:4px;z-index:-1;width:auto;height:auto;border:1px solid #8e633c66;background:url('/images/materials/plaque-cap-umber.svg') left center/23px 48px no-repeat,url('/images/materials/plaque-cap-umber-right.svg') right center/23px 48px no-repeat,url('/images/materials/fret-ribbon-umber.svg') center bottom/64px 7px repeat-x}
+.workbench-page .option-row[aria-label="文化语境"] .option-chip[aria-pressed=true]{color:#3e2612;background:linear-gradient(105deg,#d0b48199,#ead6aec9),url('/images/materials/clay_plaster.webp') center/cover;border-color:#ecd3a1;box-shadow:inset 0 0 0 3px #714e2f55,0 4px 8px #110b083d}
+.workbench-page .option-row[aria-label="文化语境"] .option-chip[aria-pressed=true]::before{border-color:#704925}
+.workbench-page .option-row[aria-label="文化语境"] .option-chip[aria-pressed=true] svg{color:inherit}
+.workbench-page .strength-control{max-width:48rem;margin:1rem 0 0;gap:1rem;font-size:1.375rem;line-height:1.7;flex-wrap:wrap}
+.workbench-page .strength-control label{font-size:1.375rem}
+.workbench-page .strength-control span{font-size:1.125rem;color:#dcc6a2}
+.workbench-page .strength-control output{font:1.375rem/1.6 var(--mono);color:#f4d7a0;min-width:3.5rem}
+.workbench-page .strength-control input[type=range]{accent-color:#c8a064;min-width:6rem}
+.workbench-page .workbench-note{font-size:1.375rem;line-height:1.85;align-items:flex-start;color:#dcc6a5;padding-inline:.5rem}
+.workbench-page .workbench-note svg{margin-top:.4rem;width:1.5rem;height:1.5rem}
+.workbench-page .restoration-scroll .source-preview{background:#211b16;outline-color:#7a532b;box-shadow:0 0 0 4px #dfc48c80,0 0 0 5px #7a532b66}
+.workbench-page .particle-reveal{background:#211b16}
+.workbench-page .source-caption{font-size:1.125rem;line-height:1.7;background:linear-gradient(transparent,#20180eed)}
+.workbench-page .remove-source{background:#352619e8;border-color:#c2a16c;width:3.25rem;height:3.25rem}
+.workbench-page :is(.result,.loading,.restoration-progress){background:linear-gradient(125deg,#493727ed,#211c17f0);border-color:#b4905b77;border-radius:2px 18px 2px 18px}
+.workbench-page .result h2{font-family:var(--brush);font-size:2.5rem}
+.workbench-page :is(.result-grid p,.restoration-verse p,.restoration-progress-foot){font-size:1.25rem;line-height:1.85;color:#ead6b5}
+.workbench-page .restoration-verse h2{font:400 1.75rem/1.7 var(--brush)}
+.workbench-page .restoration-seal{width:3.5rem;height:4rem;font:2.5rem var(--brush);box-shadow:none;background:#684b2c44}
+.workbench-page .restoration-state{font-size:1.125rem}
+.workbench-page .restoration-track span{background:linear-gradient(90deg,#9a6f38,#d7b679,#f4deab)}
+.workbench-page .error{font-size:1.25rem;line-height:1.8}
+.workbench-page .restoration-history{margin-top:3rem;padding-top:2rem}
+.workbench-page .history-heading span{font-size:1.375rem;line-height:1.7;color:#dcc095}
+.workbench-page .history-heading h2{font:400 2.5rem/1.6 var(--brush);color:#f2d5a4;margin:.6rem 0}
+.workbench-page .history-heading>b{font-size:1.5rem;white-space:nowrap}
+.workbench-page :is(.history-description,.history-empty,.history-error){font-size:1.5rem;line-height:1.9;color:#e0cfaf}
+.workbench-page .history-empty{border:0;border-block:1px solid #ae88544d;background:linear-gradient(105deg,#5b44292e,#291f18a8,#5b44292e);padding:2rem}
+.workbench-page .history-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.workbench-page .history-card{background:linear-gradient(135deg,#493827ed,#2c231beb);border-color:#b4905b66;border-radius:2px 14px 2px 14px}
+.workbench-page .history-preview{height:15rem;background:#241d17}
+.workbench-page .history-preview span{font-size:1.125rem;line-height:1.7;background:#241d17d9}
+.workbench-page .history-card-info b{font-size:1.25rem;line-height:1.7}
+.workbench-page .history-card-info time{font-size:1.125rem;color:#ddc9a6}
+.workbench-page .history-actions{flex-wrap:wrap;gap:.5rem}
+.workbench-page .history-actions :is(a,button){font-size:1.25rem;color:#f0c990}
+.workbench-page .history-dialog{background:linear-gradient(125deg,#493827,#251e17);border-color:#c1a06c;border-radius:2px 14px 2px 14px}
+.workbench-page .history-dialog-head{font-size:1.375rem;line-height:1.7}
+@media (width<=767px){
+  .workbench-page .workbench-content{width:90%}
+  .workbench-page .workbench{padding-top:2rem}
+  .workbench-page .workbench-heading h1{font-size:2.5rem}
+  .workbench-page .workbench-heading>p:last-child{font-size:1.25rem}
+  .workbench-page .workbench-heading .lab-kicker{font-size:1.125rem;letter-spacing:.04em}
+  .workbench-page .composer-toolbar{padding-inline:0;gap:1rem}
+  .workbench-page .composer-toolbar>span{font-size:1.125rem}
+  .workbench-page .mural-scroll-mount{padding:1.75rem 1.25rem}
+  .workbench-page .mural-scroll-mount::after{inset:12px}
+  .workbench-page .restoration-scroll{--stage-height:27rem}
+  .workbench-page .restoration-scroll .upload-empty{padding:1.5rem 0}
+  .workbench-page .upload-empty::after{background-size:68px 68px,68px 68px,68px 68px,68px 68px,116px 39px,72px 9px}
+  .workbench-page .upload-emblem{width:5rem;height:5.5rem}
+  .workbench-page .upload-emblem svg{width:2.75rem;height:2.75rem}
+  .workbench-page .treasure-upload-entry{padding:1rem .75rem}
+  .workbench-page .upload-target b{font-size:1.5rem}
+  .workbench-page .upload-target small{font-size:1.125rem}
+  .workbench-page .option-label{width:100%;font-size:1.25rem}
+  .workbench-page .option-chip{font-size:1.25rem;flex-wrap:wrap;flex:1 1 100%;justify-content:center}
+  .workbench-page .option-chip small{font-size:1.125rem}
+  .workbench-page .option-chip{padding-inline:2.7rem}
+  .workbench-page .repair-options{padding-inline:0}
+  .workbench-page .strength-control{gap:.65rem}
+  .workbench-page .strength-control label{width:100%;font-size:1.25rem}
+  .workbench-page .strength-control input[type=range]{min-width:4rem}
+  .workbench-page .strength-control output{font-size:1.25rem}
+  .workbench-page .workbench-note{font-size:1.375rem;text-align:left}
+  .workbench-page :is(.history-description,.history-empty,.history-error){font-size:1.375rem}
+  .workbench-page .history-grid{grid-template-columns:minmax(0,1fr)}
+  .workbench-page .history-heading{align-items:flex-start}
+}
+/* Grotto: earth-toned controls and scroll-mounted works. */
+html[data-cave-entry] body{background:#251e17}
+html[data-cave-entry] #cave-boot-screen{background:radial-gradient(ellipse at 50% 45%,#58412a,#251d16 75%);color:#efd4a1}
+html[data-cave-entry] .cave-boot-kicker{font:1.125rem/1.8 var(--serif);color:#e5c58f}
+html[data-cave-entry] .cave-boot-content h1{font:400 2.75rem/1.6 var(--brush)}
+html[data-cave-entry] .cave-boot-message{font-size:1.25rem;line-height:1.8;color:#ead8b5}
+.cave-page{background:linear-gradient(#2b21142e,#211b16b8)}
+.cave-page .cave-content{width:90%;max-width:1240px;padding-top:3rem}
+.cave-page .cave-heading{gap:1.5rem;margin-bottom:2rem}
+.cave-page .cave-heading>div>p{font:1.25rem/1.7 var(--serif);letter-spacing:.08em;color:#e5c58f;overflow-wrap:anywhere}
+.cave-page .cave-heading h1{font:400 clamp(2.5rem,4.3vw,3.75rem)/1.5 var(--brush);color:#fff0cf}
+.cave-page .cave-heading>p{font-size:1.5rem;line-height:1.8;color:#ead8b5}
+.cave-page .cave-heading>p span{font-size:1.25rem;color:#d9c29b}
+.cave-page .cave-stage{isolation:isolate;background:#251e17;border:8px solid #765d42;border-image:url('/images/materials/sandstone_cracks.webp') 40 stretch;border-radius:0;outline:1px solid #d2b37e99;outline-offset:-2px;box-shadow:0 0 0 2px #392719,0 14px 30px #120d095c}
+.cave-page .cave-stage::after{content:"";position:absolute;inset:-8px;z-index:3;pointer-events:none;border:7px solid #291e1499;background:url('/images/materials/corner-carving-gold.svg') left top/70px 70px no-repeat,url('/images/materials/corner-carving-gold-tr.svg') right top/70px 70px no-repeat,url('/images/materials/corner-carving-gold-bl.svg') left bottom/70px 70px no-repeat,url('/images/materials/corner-carving-gold-br.svg') right bottom/70px 70px no-repeat,url('/images/materials/lotus-crest-gold.svg') center top/150px 50px no-repeat;box-shadow:inset 0 0 0 1px #d2b37e77,inset 0 0 14px #1c120bcc}
+.cave-page .cave-loading{background:radial-gradient(ellipse at 50% 45%,#58412a,#251d16 75%);color:#efd4a1}
+.cave-page .cave-loading>span{font:2.75rem var(--brush)}
+.cave-page .cave-loading p{font-size:1.25rem;line-height:1.8}
+.cave-page .cave-corner{top:4.5rem;left:1.25rem;font-size:1.125rem;line-height:1.6;padding:.75rem 1rem;background:linear-gradient(115deg,#483321eb,#271f17e8);border-color:#c09c6466}
+.cave-page .cave-corner>span:last-child{color:#e1c69a}
+.cave-page .cave-live{width:7px;height:7px;background:#d5b475;box-shadow:0 0 8px #d5b475}
+.cave-page .cave-notice{font-size:1.25rem;line-height:1.8;color:#f0d8b0;background:linear-gradient(120deg,#4c3624ed,#2a2119f0);top:5rem;padding:1rem}
+.cave-page .cave-controls{isolation:isolate;bottom:1rem;padding:.6rem 2.4rem;gap:.3rem;background:linear-gradient(100deg,#6e5337f5,#35271ef5 48%,#5e472ff5),url('/images/materials/wood_table_worn.webp') center/cover;border:3px double #c4a572;border-radius:2px 12px 2px 12px;max-width:calc(100% - 2rem);filter:none;box-shadow:inset 0 2px #e1c89433,inset 0 -3px #20160e88,0 5px 12px #100c0999}
+.cave-page .cave-controls::before{content:"";position:absolute;inset:4px;z-index:-1;pointer-events:none;border:0;background:url('/images/materials/plaque-cap-gold.svg') left center/30px 64px no-repeat,url('/images/materials/plaque-cap-gold-right.svg') right center/30px 64px no-repeat,url('/images/materials/fret-ribbon-gold.svg') center bottom/72px 7px repeat-x}
+.cave-page .cave-controls button{min-width:3.5rem;min-height:3.5rem;font-size:1.25rem;line-height:1.5;color:#f8dfad;border-radius:2px}
+.cave-page .cave-controls button>svg{width:1.5rem;height:1.5rem}
+.cave-page .cave-controls button:hover,.cave-page .cave-controls button[aria-pressed=true]{background:#e1bf7830;color:#fff2d3}
+.cave-page .cave-controls button[aria-pressed=true]{box-shadow:inset 0 -2px #e1bf78}
+.cave-page .cave-controls>span{border-color:#c4a57266}
+@media (width>=768px){
+  .cave-page .cave-controls{width:max-content;flex-wrap:nowrap}
+  .cave-page .cave-controls button{flex:initial}
+}
+.cave-page .cave-hint{bottom:6.7rem;padding:0 1rem;font-size:1.125rem;line-height:1.7;color:#fff0d3;text-shadow:0 2px 4px #150f08}
+.cave-page .cave-gallery-heading{margin:3rem 0 1.5rem;gap:1rem 2rem}
+.cave-page .cave-gallery-heading h2{font:400 2.5rem/1.5 var(--brush);color:#f2d5a4;margin:0}
+.cave-page .cave-gallery-heading p{font-size:1.375rem;line-height:1.85;color:#e0cfaf;margin:0}
+.cave-page .cave-stops{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.cave-page .cave-stops article{isolation:isolate;position:relative;min-width:0;border:0;background:none;padding:1.5rem 1.5rem 1.75rem}
+.cave-page .cave-stops article::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,#342215dc,#4a3526b3),url('/images/materials/wood_table_worn.webp') center/cover;border:1px solid #b18b5788;box-shadow:inset 0 0 0 7px #1c120a44,inset 0 0 0 8px #b18b5733,0 8px 18px #090b0844;clip-path:polygon(0 9px,9px 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%)}
+.cave-page .cave-stops article::after{content:"";position:absolute;inset:3px;pointer-events:none;z-index:1;background:url('/images/materials/corner-carving-gold.svg') left top/58px 58px no-repeat,url('/images/materials/corner-carving-gold-tr.svg') right top/58px 58px no-repeat,url('/images/materials/corner-carving-gold-bl.svg') left bottom/58px 58px no-repeat,url('/images/materials/corner-carving-gold-br.svg') right bottom/58px 58px no-repeat}
+.cave-page .cave-stop{color:#efd7b1}
+.cave-page .cave-stop img{box-sizing:border-box;height:13rem;border:5px solid #47301d;outline:1px solid #d0b47b;outline-offset:3px;background:#2f241a;box-shadow:0 0 0 6px #a78c6077,0 5px 12px #130b0a55}
+.cave-page .cave-stop>span{position:relative;min-height:9.5rem;margin:1.2rem -.3rem .7rem;padding:1.4rem 1.75rem;background:radial-gradient(ellipse at 0 0,#9b6e3450,transparent 40%),linear-gradient(105deg,#d1b581d9,#e2cda7d9),url('/images/materials/clay_plaster.webp') center/cover;border:1px solid #b99865;box-shadow:3px 4px #28190b66,inset 0 0 0 4px #79553114}
+.cave-page .cave-stop>span::before{content:"";position:absolute;width:84px;height:28px;top:-16px;right:10px;pointer-events:none;background:url('/images/materials/lotus-crest-umber.svg') center/contain no-repeat}
+.cave-page .cave-stop>span::after{content:"";position:absolute;inset:5px;pointer-events:none;border-block:1px solid #87623b55;background:url('/images/materials/corner-carving-umber.svg') left top/39px 39px no-repeat,url('/images/materials/corner-carving-umber-br.svg') right bottom/39px 39px no-repeat,url('/images/materials/fret-ribbon-umber.svg') center bottom/72px 8px repeat-x}
+.cave-page .cave-stop small{font-size:1.125rem;line-height:1.7;color:#694826;margin-bottom:.5rem}
+.cave-page .cave-stop b{font:400 1.75rem/1.6 var(--brush);color:#4a2d15}
+.cave-page .cave-card-actions{justify-content:flex-start;gap:.5rem;flex-wrap:wrap}
+.cave-page .cave-card-actions button{isolation:isolate;position:relative;min-height:3.5rem;max-width:100%;flex:1 1 8rem;color:#4c2e15;background:none;border:0;padding:.8rem .7rem;font:1.25rem/1.5 var(--serif);text-align:center}
+.cave-page .cave-card-actions button::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border:0;background:url('/images/huanbi-module-plaque.svg?v=20261012-1') center/100% 100% no-repeat}
+.cave-page .cave-card-actions button:hover:not(:disabled){filter:brightness(1.06)}
+.cave-page .cave-footnote{font-size:1.125rem;line-height:1.9;color:#dcc8a7;margin-top:2rem}
+.cave-page .cave-footnote a{color:#f1d09a;text-decoration:underline;text-underline-offset:4px}
+
+/* The selection and detail windows follow the same manuscript palette. */
+html[data-site-shell] :is(.treasure-picker,.cave-picker,.cave-dialog){
+  color:#49321c;border:0;border-radius:0;width:min(94vw,1200px);max-height:90svh;padding:3rem clamp(2rem,8vw,6rem) 3.5rem;
+  background:url('/images/huanbi-atlas-scroll-mobile.svg?v=20261012-deep-wear-5') center/100% 100% no-repeat;
+  box-shadow:none;filter:drop-shadow(0 16px 30px #100b0980);
+}
+html[data-site-shell] :is(.treasure-picker-header h2,.cave-picker h2,.cave-dialog h2){text-wrap:balance;font:400 2.5rem/1.5 var(--brush);color:#513419;-webkit-text-fill-color:currentColor}
+html[data-site-shell] :is(.treasure-picker-kicker,.cave-picker header small,.cave-dialog small){font-size:1.125rem;line-height:1.8;color:#684a26}
+html[data-site-shell] :is(.treasure-picker-header p:last-child,.cave-dialog p){font-size:1.375rem;line-height:1.85;color:#4d371f}
+html[data-site-shell] :is(.treasure-picker-close,.cave-picker header>button,.cave-close){color:#4f3218;background:linear-gradient(125deg,#d7bb7e,#b69256);border:1px solid #78512a;width:3.25rem;min-width:3.25rem;height:3.25rem;min-height:3.25rem}
+html[data-site-shell] :is(.treasure-picker-close,.cave-picker header>button,.cave-close) svg{width:1.5rem;height:1.5rem}
+html[data-site-shell] :is(.treasure-picker-tools,.cave-picker-tools){gap:1rem;background:none}
+html[data-site-shell] .treasure-picker-tools{grid-template-columns:minmax(0,1fr) minmax(16rem,.6fr)}
+html[data-site-shell] .cave-picker[open]{display:flex;flex-direction:column;overflow:hidden}
+html[data-site-shell] .cave-picker header{flex-shrink:0;height:auto;border:0;min-width:0}
+html[data-site-shell] .cave-picker-tools{position:static;flex-shrink:0;background:none;padding:1rem 0 .5rem}
+html[data-site-shell] .cave-picker-grid{min-height:0;overflow:auto;scrollbar-color:#76532b #c2a16a;padding:.25rem .4rem .5rem}
+html[data-site-shell] :is(.treasure-picker-filters,.cave-picker-filters){gap:.6rem}
+html[data-site-shell] :is(.treasure-picker-filters,.cave-picker-filters) button{font-size:1.25rem;line-height:1.6;min-height:3rem;padding:.6rem .85rem;color:#50361b;background:linear-gradient(120deg,#d9bd8450,#a5814838);border:1px solid #80582e88;border-radius:2px 9px 2px 9px}
+html[data-site-shell] :is(.treasure-picker-filters,.cave-picker-filters) button[aria-pressed=true]{color:#f7e4c1;background:linear-gradient(120deg,#79552f,#52391f);border-color:#5d3e21}
+html[data-site-shell] :is(.treasure-picker-search,.cave-picker-tools label){min-height:3.5rem;color:#684725;background:#edcf932e;border-color:#7c552f88}
+html[data-site-shell] :is(.treasure-picker-search input,.cave-picker-tools input){font-size:1.25rem;line-height:1.7;min-height:3.5rem;color:#4a321b}
+html[data-site-shell] :is(.treasure-picker-search input,.cave-picker-tools input)::placeholder{color:#6d4c2a}
+html[data-site-shell] :is(.treasure-picker-status,.cave-picker-tools p){font-size:1.125rem;line-height:1.8;color:#634423;flex-wrap:wrap}
+html[data-site-shell] :is(.treasure-picker-grid,.cave-picker-grid){grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+html[data-site-shell] .treasure-picker-header>div{min-width:0}
+html[data-site-shell] .treasure-picker-overlay{background:#171009d9}
+html[data-site-shell] :is(.cave-picker,.cave-dialog)::backdrop{background:#171009e6}
+html[data-site-shell] :is(.treasure-picker-empty,.cave-picker-empty){color:#594023;font-size:1.25rem;line-height:1.85}
+html[data-site-shell] .treasure-picker-empty button{font-size:1.25rem;min-height:3rem;color:#f7e4c1;background:linear-gradient(120deg,#79552f,#52391f);border-color:#5d3e21}
+html[data-site-shell] .treasure-picker-error{color:#7a2e22;font-size:1.125rem;line-height:1.8}
+html[data-site-shell] :is(.treasure-picker-card,.cave-picker-grid>button){color:#50361c;background:linear-gradient(125deg,#e1c89538,#98703920);border:1px solid #7b572b55;border-radius:2px 12px 2px 12px;padding:.85rem}
+html[data-site-shell] :is(.treasure-picker-card,.cave-picker-grid>button):hover:not(:disabled){background:#edcf9355;border-color:#6b4825}
+html[data-site-shell] .cave-picker-grid>button[aria-pressed=true]{background:#ead09766;border:2px solid #6b4825}
+html[data-site-shell] .treasure-picker-image,html[data-site-shell] .cave-picker-grid img{background:#30241a}
+html[data-site-shell] .cave-picker-grid img{height:12rem}
+html[data-site-shell] :is(.treasure-picker-meta,.cave-picker-grid span,.cave-picker-grid small){font-size:1.125rem;line-height:1.7;color:#674825}
+html[data-site-shell] :is(.treasure-picker-title,.cave-picker-grid b){font-size:1.375rem;line-height:1.8;color:#4d321a;-webkit-line-clamp:unset;display:block;overflow:visible}
+html[data-site-shell] .treasure-picker-use{font-size:1.25rem;line-height:1.7;color:#62411f;padding-top:1rem}
+html[data-site-shell] .treasure-picker-gallery{scrollbar-color:#76532b #c2a16a}
+html[data-site-shell] .cave-dialog a{font-size:1.25rem;line-height:1.7;color:#62411f;text-decoration:underline;text-underline-offset:4px}
+html[data-site-shell] :is(.treasure-picker,.cave-picker,.cave-dialog) :focus-visible{outline:2px solid #583818;outline-offset:3px}
+@media (width<=899px){
+  .cave-page .cave-stops{grid-template-columns:repeat(2,minmax(0,1fr))}
+  html[data-site-shell] :is(.treasure-picker-grid,.cave-picker-grid){grid-template-columns:repeat(2,minmax(0,1fr))}
+  html[data-site-shell] .treasure-picker-tools{grid-template-columns:minmax(0,1fr)}
+}
+@media (width<=767px){
+  .cave-page .cave-content{padding-top:2rem}
+  .cave-page .cave-heading>div>p{font-size:1.125rem;letter-spacing:.04em}
+  .cave-page .cave-heading>p{font-size:1.25rem}
+  .cave-page .cave-heading>p span{font-size:1.125rem}
+  .cave-page .cave-corner{font-size:1rem;top:3.6rem;left:.75rem;padding:.6rem .7rem}
+  .cave-page .cave-controls{box-sizing:border-box;width:calc(100% - 2rem);padding:.65rem;gap:.4rem;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+  .cave-page .cave-controls button{flex:1 0 calc(20% - .4rem);min-width:2.75rem;min-height:3rem;font-size:1.125rem}
+  .cave-page .cave-hint{bottom:10rem;font-size:1.125rem;line-height:1.7}
+  .cave-page .cave-notice{font-size:1.125rem}
+  .cave-page .cave-gallery-heading p{font-size:1.25rem}
+  html[data-site-shell] :is(.treasure-picker,.cave-picker,.cave-dialog){width:96vw;padding:2.75rem 2rem 3rem}
+  html[data-site-shell] :is(.treasure-picker-header h2,.cave-picker h2,.cave-dialog h2){font-size:2rem}
+  html[data-site-shell] :is(.treasure-picker-header p:last-child,.cave-dialog p){font-size:1.25rem}
+  html[data-site-shell] :is(.treasure-picker-filters,.cave-picker-filters) button{font-size:1.125rem}
+  html[data-site-shell] :is(.treasure-picker-title,.cave-picker-grid b){font-size:1.25rem}
+  html[data-site-shell] :is(.treasure-picker-card,.cave-picker-grid>button){padding:.65rem}
+}
+@media (width<=359px){
+  .cave-page .cave-controls{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .cave-page .cave-hint{bottom:14rem}
+}
+@media (width<=599px){
+  .cave-page .cave-stops{grid-template-columns:minmax(0,1fr)}
+  html[data-site-shell] :is(.treasure-picker-grid,.cave-picker-grid){grid-template-columns:minmax(0,1fr)}
+  html[data-site-shell] .treasure-picker{height:94svh;max-height:94svh}
+  html[data-site-shell] :is(.treasure-picker-filters,.cave-picker-filters){flex-wrap:nowrap;overflow:auto;padding:.25rem 0 .6rem;scrollbar-color:#76532b #c2a16a}
+  html[data-site-shell] :is(.treasure-picker-filters,.cave-picker-filters) button{flex-shrink:0}
+  html[data-site-shell] :is(.treasure-picker-header,.cave-picker header){display:block;padding-top:1.75rem}
+  html[data-site-shell] :is(.treasure-picker-close,.cave-picker header>button){position:absolute;top:1.75rem;right:2rem}
+  html[data-site-shell] :is(.treasure-picker-kicker,.cave-picker header small){display:block;padding-right:3.5rem}
+}
+@media (height<=700px){
+  html[data-site-shell] .treasure-picker{display:block;overflow:auto}
+  html[data-site-shell] .treasure-picker-gallery{overflow:visible}
+  html[data-site-shell] .cave-picker[open]{display:block;overflow:auto}
+  html[data-site-shell] .cave-picker-grid{overflow:visible}
+}
+/* Conservation atlas: manuscript entries around an unchanged teaching diagram. */
+html[data-site-shell] .damage-atlas-page{--atlas-gold:#e2bd7f;--atlas-muted:#ddcbaa;--atlas-line:#b990554d;background:#241f17}
+html[data-site-shell] .damage-atlas-page::before{background:linear-gradient(#2b2114b3,#211c17f0),url('/images/exhibition-main-upper.webp') top/cover no-repeat}
+.damage-atlas-page .damage-atlas-main{width:90%;max-width:1240px;padding-bottom:2rem}
+.damage-atlas-main .damage-hero{gap:2rem;padding:3rem 0}
+.damage-atlas-main .damage-kicker{font-size:1.375rem;line-height:1.7;letter-spacing:.12em;overflow-wrap:anywhere}
+.damage-atlas-main .damage-hero-line{font-size:1.75rem;line-height:1.8;color:#f0d6a8}
+.damage-atlas-main .damage-hero-copy{font-size:1.5rem;line-height:1.9;color:#e5d0ab}
+.damage-atlas-main .damage-hero-note{isolation:isolate;position:relative;border:0;width:21rem;max-width:100%;padding:2.2rem 2rem 2.5rem;color:#51361d}
+.damage-atlas-main .damage-hero-note::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('/images/materials/ornament-umber.svg') center/100% 100% no-repeat,linear-gradient(110deg,#e6d5b6f2,#cbb48ce3),url('/images/materials/clay_plaster.webp') center/cover;border:1px solid #c7ac7c;box-shadow:inset 0 0 0 8px #70533615,0 8px 16px #100b0940;clip-path:polygon(0 0,94% 0,100% 7%,100% 100%,2% 98%,0 94%)}
+.damage-atlas-main .damage-hero-note::after{content:none}
+.damage-atlas-main .damage-hero-note>span{font-size:1.25rem;line-height:1.7;color:#684824}
+.damage-atlas-main .damage-hero-note p{font:400 2rem/1.7 var(--brush);color:#54351b}
+.damage-atlas-main .damage-hero-note small{font-size:1.125rem;line-height:1.8;color:#624522}
+/* Six illuminated folios, each with a distinct conservation medallion. */
+.damage-atlas-main .damage-directory{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;padding:2.5rem 0 3.5rem}
+.damage-atlas-main .damage-directory button{isolation:isolate;min-height:12rem;grid-template-columns:2.25rem minmax(0,1fr);align-content:center;gap:.85rem .85rem;padding:2rem clamp(7.25rem,10.83vw,9.75rem) 2rem clamp(1.5rem,2.22vw,2rem);border:1px solid #b18c55;border-radius:2px;background:#ead7b3;color:#51351a;overflow:visible;filter:none;box-shadow:0 3px 0 -1px #927046,0 9px 18px #100b0940,inset 0 1px #f8ecd4;transition:border-color .18s,box-shadow .18s}
+.damage-atlas-main .damage-directory button::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 95% 100%,#b18c562e,transparent 57%),radial-gradient(ellipse at 0 0,#fff5dc8a,transparent 60%),repeating-linear-gradient(1deg,#78552c03 0 1px,transparent 1px 4px),linear-gradient(105deg,#ead7b3,#f0e2c4 62%,#e6d2aa);border-radius:inherit;clip-path:none;box-shadow:inset 0 0 22px #9d77421a}
+.damage-atlas-main .damage-directory button::after{content:"";position:absolute;inset:3px;z-index:-1;pointer-events:none;border:0;background:url('/images/materials/atlas-folio-frame.svg') center/100% 100% no-repeat}
+.damage-atlas-main .damage-directory button:hover{background:#ead7b3;filter:none;border-color:#806137;box-shadow:0 3px 0 -1px #927046,0 10px 22px #100b0959,inset 0 0 0 2px #a784482e}
+.damage-atlas-main .damage-directory button[aria-pressed=true]{background:#ead7b3;filter:none;border-color:#96553c;box-shadow:0 3px 0 -1px #80543b,0 9px 18px #100b0940,inset 0 0 0 2px #96553c40}
+.damage-atlas-main .damage-directory button:focus-visible{outline:3px solid #efd3a0;outline-offset:5px}
+.damage-atlas-main .damage-directory button[aria-pressed=true] .damage-directory-number{background:#92513b;color:#f8e7c5;border-color:#92513b;box-shadow:inset 0 0 0 3px #ead0a755}
+.damage-atlas-main .damage-directory button[aria-pressed=true] .damage-directory-name{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:1.5px;text-decoration-color:#92513b;color:#643c28}
+.damage-atlas-main .damage-directory-number{display:grid;place-items:center;align-self:center;width:2.25rem;height:2.25rem;padding:0;font:1.125rem/1 var(--mono);color:#82452f;border:1px solid #a76a49;box-shadow:inset 0 0 0 3px #bc936e26}
+.damage-atlas-main .damage-directory-name{position:relative;font:400 2.5rem/1.5 var(--brush);color:#55361b;white-space:nowrap}
+.damage-atlas-main .damage-directory small{grid-column:1/-1;font:1.125rem/1.7 var(--mono);color:#694b2e;overflow-wrap:normal;word-break:normal}
+.damage-atlas-main .damage-directory-word{width:clamp(6rem,9.44vw,8.5rem);height:clamp(6rem,9.44vw,8.5rem);font-size:0;color:transparent;right:clamp(.75rem,1.11vw,1rem);top:50%;transform:translateY(-50%);pointer-events:none;background-position:center;background-size:contain;background-repeat:no-repeat}
+.damage-atlas-main .damage-directory button:nth-child(1) .damage-directory-word{background-image:url('/images/materials/atlas-medallion-fading.svg')}
+.damage-atlas-main .damage-directory button:nth-child(2) .damage-directory-word{background-image:url('/images/materials/atlas-medallion-cracks.svg')}
+.damage-atlas-main .damage-directory button:nth-child(3) .damage-directory-word{background-image:url('/images/materials/atlas-medallion-flaking.svg')}
+.damage-atlas-main .damage-directory button:nth-child(4) .damage-directory-word{background-image:url('/images/materials/atlas-medallion-loss.svg')}
+.damage-atlas-main .damage-directory button:nth-child(5) .damage-directory-word{background-image:url('/images/materials/atlas-medallion-soot.svg')}
+.damage-atlas-main .damage-directory button:nth-child(6) .damage-directory-word{background-image:url('/images/materials/atlas-medallion-salt.svg')}
+@media (600px<=width<=1099px){.damage-atlas-main .damage-directory{grid-template-columns:repeat(2,minmax(0,1fr))}.damage-atlas-main .damage-directory button{padding-right:9rem;padding-left:1.75rem}.damage-atlas-main .damage-directory-word{width:7.5rem;height:7.5rem;right:.75rem}}
+@media (prefers-reduced-motion:reduce){.damage-atlas-main .damage-directory button{transition:none}}
+@media (forced-colors:active){.damage-atlas-main .damage-directory-word{display:none}.damage-atlas-main .damage-directory button[aria-pressed=true]{outline:2px solid Highlight;outline-offset:-4px}}
+.damage-atlas-main .damage-section-heading{gap:1rem 2rem;margin-bottom:1.75rem}
+.damage-atlas-main .damage-section-heading h2{font-size:3rem;line-height:1.55;color:#f3d7a6}
+.damage-atlas-main .damage-section-heading>p{font-size:1.375rem;line-height:1.8;color:#dfcbaa}
+.damage-atlas-main .damage-observation-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2rem}
+.damage-atlas-main .damage-figure{background:linear-gradient(125deg,#493727de,#292018dc),url('/images/materials/wood_table_worn.webp') center/cover;border:1px solid #b58e5788;border-radius:0;padding:1.25rem;box-shadow:inset 0 0 0 6px #1b120c44,inset 0 0 0 7px #c19b6433,0 9px 20px #160e0840}
+.damage-atlas-main .damage-specimen{border:5px solid #64482d;outline:1px solid #c2a776;outline-offset:4px;box-shadow:0 0 0 8px #b6a07966,0 5px 12px #160e0866;margin:8px 8px 0}
+.damage-atlas-main .damage-specimen::after{content:"";position:absolute;inset:-8px;z-index:1;pointer-events:none;background:url('/images/materials/corner-carving-gold.svg') left top/62px 62px no-repeat,url('/images/materials/corner-carving-gold-tr.svg') right top/62px 62px no-repeat,url('/images/materials/corner-carving-gold-bl.svg') left bottom/62px 62px no-repeat,url('/images/materials/corner-carving-gold-br.svg') right bottom/62px 62px no-repeat}
+.damage-atlas-main .damage-figure-toolbar{font-size:1.25rem;line-height:1.7;gap:1rem;padding:.2rem .2rem 1.1rem;color:#e8c997}
+.damage-atlas-main .damage-figure-toolbar>span{position:relative;font-size:1.5rem;padding-left:2.3rem}
+.damage-atlas-main .damage-figure-toolbar>span::before{content:"";position:absolute;left:0;top:50%;width:30px;height:30px;transform:translateY(-50%);pointer-events:none;border:1px solid #c7a363;background:url('/images/materials/lotus-crest-gold.svg') center/66px 23px no-repeat,#47301d;box-shadow:inset 0 0 0 3px #c7a36333}
+.damage-atlas-main .damage-figure-toolbar>div{gap:.6rem;max-width:100%}
+.damage-atlas-main .damage-figure-toolbar button,.damage-atlas-main .damage-digital-note a{isolation:isolate;position:relative;min-height:3.75rem;max-width:100%;padding:.9rem 1.2rem;gap:.5rem;border:0;background:none;color:#4c2e15;font:1.25rem/1.6 var(--serif)}
+.damage-atlas-main .damage-figure-toolbar button::after,.damage-atlas-main .damage-digital-note a::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border:0;background:url('/images/huanbi-module-plaque.svg?v=20261012-1') center/100% 100% no-repeat}
+.damage-atlas-main .damage-figure-toolbar button:hover,.damage-atlas-main .damage-digital-note a:hover{filter:brightness(1.08)}
+.damage-atlas-main .damage-figure-toolbar button[aria-pressed=true]{text-decoration:underline;text-underline-offset:5px}
+.damage-atlas-main .damage-figure-toolbar button>svg{width:1.3rem;height:1.3rem;flex-shrink:0}
+.damage-atlas-main .damage-hotspot{width:3.25rem;height:3.25rem;font-size:1.125rem;color:#f6e3bf;background:#4a3320e6;border-color:#e2c188;box-shadow:0 0 0 4px #49342240,0 2px 10px #130d0855}
+.damage-atlas-main .damage-hotspot[aria-pressed=true]{color:#4a3017;background:#e0bc78;box-shadow:0 0 0 5px #e5c89350,0 2px 10px #130d0855}
+.damage-atlas-main .damage-hotspot-label{font-size:1.25rem;line-height:1.6;color:#f6e3bf;background:#4a3320ed;border-color:#c19a60}
+.damage-atlas-main .damage-figure figcaption{font-size:1.125rem;line-height:1.85;gap:.7rem;margin-top:1.5rem;padding:.9rem .3rem .2rem;border-top:1px solid #b28e554d;color:#e0cdab}
+.damage-atlas-main .damage-figure figcaption>span:first-child{font-size:1.25rem;color:#efcc93}
+.damage-atlas-main .damage-detail{--atlas-gold:#6d4924;--atlas-muted:#594023;--atlas-line:#78552c55;isolation:isolate;position:relative;border:0;background:none;margin:6px 8px 12px 0;padding:3rem 2.25rem 3.5rem 3rem;color:#49321c}
+.damage-atlas-main .damage-detail::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('/images/materials/corner-carving-umber-tr.svg') right 4px top 4px/75px 75px no-repeat,url('/images/materials/corner-carving-umber-br.svg') right 4px bottom 4px/75px 75px no-repeat,url('/images/materials/fret-ribbon-umber.svg') left bottom/96px 11px repeat-x,radial-gradient(circle at 50% 9px,#654322 0 3px,#bd955a 4px 6px,transparent 7px) 10px 25px/14px 49px repeat-y,repeating-linear-gradient(0deg,#704d2bcc 0 12px,transparent 12px 17px) 16px 30px/2px calc(100% - 60px) no-repeat,radial-gradient(ellipse at 100% 100%,#97653655,transparent 32%),linear-gradient(105deg,#b19362b3,#e7d6b5e8 9% 85%,#c1a476c9),url('/images/materials/clay_plaster.webp') center/cover;border:1px solid #bea06d;box-shadow:inset 7px 0 #80533324,0 10px 20px #100b0940;clip-path:polygon(0 0,calc(100% - 17px) 0,100% 17px,100% 100%,0 100%)}
+.damage-atlas-main .damage-detail::after{content:"";position:absolute;inset:7px -7px -8px 8px;z-index:-2;pointer-events:none;background:linear-gradient(105deg,#c2a677,#d3bd95);border:1px solid #a38251;box-shadow:inset 0 -4px #80603c22;transform:rotate(.4deg)}
+.damage-atlas-main .damage-detail>.damage-kicker{display:inline-block;padding:.35rem .8rem;margin-bottom:.5rem;border:1px solid #946a3c;border-left:5px solid #9c5037;color:#795331;background:#b08b5322;box-shadow:inset 0 0 0 3px #ddc59d66}
+.damage-atlas-page .damage-atlas-main .damage-detail-title{position:relative;font:400 3.25rem/1.4 var(--brush);color:#513419;margin:.3rem 0 .8rem}
+.damage-atlas-main .damage-detail-title::after{content:"";position:absolute;width:104px;height:35px;right:4px;bottom:2px;pointer-events:none;background:url('/images/materials/lotus-crest-umber.svg') center/contain no-repeat}
+.damage-atlas-main .damage-detail-summary{font-size:1.5rem;line-height:1.8;color:#533b20}
+.damage-atlas-main .damage-detail-tabs{gap:.3rem;border-color:#79542b66}
+.damage-atlas-main .damage-detail-tabs button{font-size:1.25rem;line-height:1.65;min-height:3.5rem;white-space:normal;padding:.65rem .15rem;color:#72512d}
+.damage-atlas-main .damage-detail-tabs button[aria-selected=true]{color:#432912;border-color:#6f4823;font-weight:600}
+.damage-atlas-main .damage-detail-panel ol{padding:1.25rem 0}
+.damage-atlas-main .damage-detail-panel li{gap:.8rem;margin-bottom:1rem}
+.damage-atlas-main .damage-detail-panel li>span{font-size:1.125rem;line-height:1.8;color:#78512a}
+.damage-atlas-main .damage-detail-panel li>p{font-size:1.375rem;line-height:1.85;color:#4e371e}
+.damage-atlas-main .damage-distinction>span{display:inline-block;position:relative;font-size:1.25rem;line-height:1.8;color:#684522;padding-inline:1.3rem;border-inline:1px solid #a47543}
+.damage-atlas-main .damage-distinction>span::after{content:"";position:absolute;inset:auto 0 -8px;height:6px;pointer-events:none;background:url('/images/materials/fret-ribbon-umber.svg') center/64px 6px repeat-x}
+.damage-atlas-main .damage-distinction p{font-size:1.25rem;line-height:1.85;color:#594023}
+.damage-atlas-main .damage-materials{gap:2.5rem;padding:4rem 0}
+.damage-atlas-main :is(.damage-materials h2,.damage-conservation>h2,.damage-sources h2){font-size:3rem;line-height:1.55;color:#f3d7a6}
+.damage-atlas-main .damage-materials-copy>p:not(.damage-kicker){font-size:1.375rem;line-height:1.9;color:#e2cdab}
+.damage-atlas-main .damage-materials-copy small{font-size:1.25rem;line-height:1.85;color:#d1b88f}
+.damage-atlas-main .damage-layer-stack{gap:1rem;padding:1rem 0 1rem 1rem}
+.damage-atlas-main .damage-layer-row{--layer-texture:url('/images/materials/worn_cracked_plaster.webp');--layer-wash:#3f3026de;isolation:isolate;position:relative;opacity:1;grid-template-columns:7rem minmax(0,1fr);gap:.5rem 1rem;padding:1.4rem 3.1rem 1.4rem 1.5rem;border:1px solid #b48e5666;border-left:4px solid #b48e56;background:url('/images/materials/fret-ribbon-gold.svg') left bottom/96px 8px repeat-x,linear-gradient(100deg,var(--layer-wash) 45%,#31251db3),var(--layer-texture) center/cover;border-radius:0;box-shadow:0 6px 10px #100b0940,inset 0 1px #f4dfb12e}
+.damage-atlas-main .damage-layer-row::before{content:"";position:absolute;left:-15px;top:6px;bottom:-6px;width:10px;z-index:-1;pointer-events:none;border:1px solid #b48e564d;background:linear-gradient(#31251d55,#31251d55),var(--layer-texture) center/cover;box-shadow:inset -3px 0 #17100955}
+.damage-atlas-main .damage-layer-row>span{font-size:1.375rem;line-height:1.7;color:#f6e2bf}
+.damage-atlas-main .damage-layer-row::after{content:"";position:absolute;right:6px;top:50%;width:29px;height:62px;transform:translateY(-50%);pointer-events:none;background:url('/images/materials/plaque-cap-gold-right.svg') center/100% 100% no-repeat}
+.damage-atlas-main .damage-layer-row p{font-size:1.25rem;line-height:1.8;color:#efdbb9}
+.damage-atlas-main .damage-layer-row small{font-size:1.125rem;line-height:1.7;color:#f8d594}
+.damage-atlas-main .layer-paint{--layer-texture:url('/images/materials/blue_plaster_weathered.webp');--layer-wash:#33453cde;margin-left:12px}
+.damage-atlas-main .layer-plaster{--layer-texture:url('/images/materials/clay_plaster.webp');--layer-wash:#554630de;margin-left:24px}
+.damage-atlas-main .layer-wall{--layer-texture:url('/images/materials/sandstone_cracks.webp');--layer-wash:#443a2dde;margin-left:36px}
+.damage-atlas-main .damage-layer-row[data-affected=true]{background:url('/images/materials/fret-ribbon-gold.svg') left bottom/96px 8px repeat-x,linear-gradient(100deg,var(--layer-wash) 45%,#31251db3),var(--layer-texture) center/cover;border-color:#ebc78e;border-left-color:#f5d89a;box-shadow:inset 0 0 0 2px #e2bd7f55,0 6px 10px #100b0940}
+.damage-atlas-main .damage-layer-row[data-affected=true]>span{position:relative}
+.damage-atlas-main .damage-layer-row[data-affected=true]>span::before{content:"";display:inline-block;width:9px;height:9px;margin-right:7px;border:1px solid #edc691;background:#9d4e36;box-shadow:0 0 0 2px #ad875433;transform:rotate(-6deg)}
+.damage-atlas-main .damage-conservation{padding:4rem 0}
+.damage-atlas-main .damage-principles{gap:2rem;margin:2rem 0 3rem}
+.damage-atlas-main .damage-principles>div>span{font-size:1.25rem;line-height:1.7}
+.damage-atlas-main .damage-principles h3{font:400 2rem/1.7 var(--brush);color:#f2d6a6;margin:1rem 0}
+.damage-atlas-main .damage-principles p{font-size:1.375rem;line-height:1.9;color:#e0cdab}
+.damage-atlas-main .damage-digital-note{isolation:isolate;position:relative;gap:1.5rem;padding:4rem 4rem 3.7rem;border:1px solid #a881504d;background:linear-gradient(100deg,#332215dd,#53391db3),url('/images/materials/wood_table_worn.webp') center/cover;color:#533a1e;box-shadow:0 10px 20px #100b0940}
+.damage-atlas-main .damage-digital-note::before{content:"";position:absolute;inset:12px 10px 16px 18px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 0 100%,#9362384d,transparent 30%),radial-gradient(ellipse at 95% 0,#9a703b4d,transparent 28%),linear-gradient(100deg,#c6a873b3,#e8d4adeb 12% 80%,#c5a77fc9),url('/images/materials/clay_plaster.webp') center/cover;border:1px solid #c4a16d;box-shadow:3px 4px #b99a6877,inset 0 0 0 5px #84582d18;clip-path:polygon(0 7px,7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%)}
+.damage-atlas-main .damage-digital-note::after{content:"";position:absolute;inset:18px 16px 22px 24px;z-index:-1;pointer-events:none;border-inline:1px solid #a37b4744;background:url('/images/materials/corner-carving-umber.svg') left top/82px 82px no-repeat,url('/images/materials/corner-carving-umber-tr.svg') right top/82px 82px no-repeat,url('/images/materials/corner-carving-umber-bl.svg') left bottom/82px 82px no-repeat,url('/images/materials/corner-carving-umber-br.svg') right bottom/82px 82px no-repeat,url('/images/materials/lotus-crest-umber.svg') center top/140px 47px no-repeat,url('/images/materials/fret-ribbon-umber.svg') center bottom/96px 10px repeat-x}
+.damage-atlas-main .damage-digital-note>svg{box-sizing:content-box;flex-shrink:0;align-self:center;width:2.25rem;height:2.25rem;padding:.6rem;color:#755027;border:3px double #9a743f;background:linear-gradient(120deg,#d8bf90,#c4a473);box-shadow:2px 3px #a47f4440}
+.damage-atlas-main .damage-digital-note p{font-size:1.375rem;line-height:1.9;color:#533a1e}
+.damage-atlas-main .damage-digital-note b{font:400 1.75rem/1.7 var(--brush);color:#4e3117;margin-bottom:.65rem}
+.damage-atlas-main .damage-digital-note p>span{color:#594023}
+.damage-atlas-main .damage-digital-note a{width:auto;font-size:1.375rem;text-align:center;text-decoration:none;min-height:4rem}
+.damage-atlas-main .damage-sources{padding:4rem 0;gap:2.5rem}
+.damage-atlas-main .damage-sources>div>p:not(.damage-kicker){font-size:1.375rem;line-height:1.85;max-width:none;color:#dcc4a0}
+.damage-atlas-main .damage-sources a{font-size:1.375rem;line-height:1.85;color:#f0d4a3;overflow-wrap:anywhere;padding:1.3rem 0}
+.damage-atlas-main .damage-sources a small{font-size:1.25rem;line-height:1.8;color:#dcc4a0}
+@media (width<=1099px){.damage-atlas-main .damage-observation-grid{grid-template-columns:minmax(0,1fr)}}
+@media (width<=767px){
+  .damage-atlas-main .damage-hero{padding-top:2rem}
+  .cave-page .cave-stage::after{background-size:46px 46px,46px 46px,46px 46px,46px 46px,128px 43px}
+  .damage-atlas-main .damage-kicker{font-size:1.25rem}
+  .damage-atlas-main .damage-hero-line{font-size:1.5rem}
+  .damage-atlas-main .damage-hero-copy{font-size:1.25rem}
+  .damage-atlas-main .damage-hero-note{width:100%;padding:2.5rem 2rem 3rem}
+  .damage-atlas-main .damage-directory{grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+  .damage-atlas-main .damage-directory button{min-height:13rem;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto 1fr;padding:1.5rem 1.25rem;align-content:start;gap:.65rem}
+  .damage-atlas-main .damage-directory-number{width:2rem;height:2rem;font-size:1rem;padding:0}
+  .damage-atlas-main .damage-directory-name{font-size:2rem;align-self:start}
+  .damage-atlas-main .damage-directory small{grid-column:1;font-size:1rem;align-self:start}
+  .damage-atlas-main .damage-directory-word{width:3.25rem;height:3.25rem;right:.9rem;top:.65rem;transform:none}
+  .damage-atlas-main :is(.damage-section-heading h2,.damage-materials h2,.damage-conservation>h2,.damage-sources h2){font-size:2.25rem}
+  .damage-atlas-main .damage-section-heading>p{font-size:1.25rem}
+  .damage-atlas-main .damage-figure{padding:.75rem}
+  .damage-atlas-main .damage-specimen{margin:6px 6px 0;border-width:3px;outline-offset:3px;box-shadow:0 0 0 6px #b6a07966}
+  .damage-atlas-main .damage-figure-toolbar button{font-size:1.125rem;padding:.8rem 1rem}
+  .damage-atlas-main .damage-hotspot{width:3rem;height:3rem}
+  .damage-atlas-main .damage-detail{padding:2.5rem 1.25rem 3rem 2rem}
+  .damage-atlas-main .damage-detail-summary{font-size:1.375rem}
+  .damage-atlas-main .damage-detail-panel li>p{font-size:1.25rem}
+  .damage-atlas-main .damage-layer-row{grid-template-columns:minmax(0,1fr);padding:1.2rem 2.75rem 1.3rem 1rem}
+  .damage-atlas-main .layer-paint{margin-left:8px}
+  .damage-atlas-main .layer-plaster{margin-left:16px}
+  .damage-atlas-main .layer-wall{margin-left:24px}
+  .damage-atlas-main .damage-layer-row small{grid-column:1}
+  .damage-atlas-main .damage-digital-note{padding:3.6rem 1.75rem 3rem;gap:1rem;align-items:flex-start}
+  .damage-atlas-main .damage-digital-note::before{inset:9px 8px 13px 12px}
+  .damage-atlas-main .damage-digital-note::after{inset:15px 12px 20px 16px;background-size:61px 61px,61px 61px,61px 61px,61px 61px,108px 36px,72px 8px}
+  .damage-atlas-main .damage-digital-note>svg{width:1.75rem;height:1.75rem;align-self:flex-start;padding:.5rem}
+  .damage-atlas-main .damage-digital-note p{font-size:1.25rem}
+  .damage-atlas-main .damage-digital-note a{width:100%;font-size:1.25rem}
+}
+@media (forced-colors:active){
+  .workbench-page .mural-scroll-mount{background:Canvas;border:1px solid CanvasText}
+  .workbench-page .mural-scroll-mount::before,.workbench-page .mural-scroll-mount::after{display:none}
+  .workbench-page :is(.stage-action,.restore-submit,.actions button,.actions a){border:1px solid ButtonText;color:ButtonText;filter:none}
+  .workbench-page :is(.stage-action,.restore-submit,.actions button,.actions a)::after{display:none}
+  .cave-page :is(.cave-controls,.cave-stops article),.damage-atlas-main :is(.damage-hero-note,.damage-directory button,.damage-detail,.damage-digital-note){background:Canvas;border:1px solid CanvasText;filter:none;color:CanvasText}
+  .cave-page .cave-controls::before,.cave-page .cave-stops article::before,.cave-page .cave-card-actions button::after,.damage-atlas-main :is(.damage-hero-note,.damage-directory button,.damage-detail,.damage-digital-note)::before,.damage-atlas-main .damage-directory button::after,.damage-atlas-main .damage-hero-note::after,.damage-atlas-main .damage-figure-toolbar button::after,.damage-atlas-main .damage-digital-note a::after{display:none}
+  .cave-page .cave-card-actions button,.damage-atlas-main .damage-figure-toolbar button,.damage-atlas-main .damage-digital-note a{border:1px solid ButtonText;color:ButtonText}
+  html[data-site-shell] :is(.treasure-picker,.cave-picker,.cave-dialog){background:Canvas;border:1px solid CanvasText;color:CanvasText;filter:none}
+  .workbench-page :is(.upload-empty,.option-chip),.cave-page .cave-stop>span,.damage-atlas-main :is(.damage-layer-row,.damage-specimen){background:Canvas;border:1px solid CanvasText;outline:0;box-shadow:none;color:CanvasText}
+  .workbench-page :is(.upload-empty,.option-chip)::before,.workbench-page :is(.upload-empty,.option-chip)::after,.cave-page .cave-stage::after,.cave-page .cave-stop>span::after,.damage-atlas-main :is(.damage-layer-row,.damage-detail,.damage-digital-note,.damage-specimen)::after,.damage-atlas-main .damage-layer-row::before{display:none}
+  .workbench-page .option-chip[aria-pressed=true],.damage-atlas-main .damage-layer-row[data-affected=true]{outline:2px solid Highlight;outline-offset:-4px}
+  .workbench-page .upload-emblem::before,.workbench-page .upload-emblem::after,.cave-page .cave-stops article::after,.cave-page .cave-stop>span::before,.damage-atlas-main .damage-figure-toolbar>span::before,.damage-atlas-main .damage-detail-title::after,.damage-atlas-main .damage-distinction>span::after,.damage-atlas-main .damage-layer-row[data-affected=true]>span::before{display:none}
+}

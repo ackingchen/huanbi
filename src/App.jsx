@@ -18,6 +18,13 @@ import {
 import "./styles.css";
 import "./brush-font.css";
 import "./Workbench.css";
+import "./huanbi-exhibition.css";
+import "./huanbi-art-buttons.css";
+import "./huanbi-admin.css";
+import "./huanbi-three-modules.css";
+import "./huanbi-page-turn.css";
+import "./huanbi-page-turn.js";
+import SeriesExplore from './components/SeriesExplore';
 import ParticleReveal from "./components/ParticleReveal";
 import RestorationProgress from "./components/RestorationProgress";
 import RestorationHistory from "./components/RestorationHistory";
@@ -226,6 +233,7 @@ function App() {
           </div>
         </section>
       </main>
+      <SeriesExplore active="workbench" />
       <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href="/">焕 壁</a><p>一 壁 千 年 · 一 眼 新 生</p><span>© 2026 HUANBI <a href="/admin">管理后台 ↗</a></span></footer>
     </div>
   );

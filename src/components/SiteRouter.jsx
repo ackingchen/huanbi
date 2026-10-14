@@ -1,6 +1,5 @@
 import { Component, createContext, Suspense, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState, useTransition, ViewTransition } from 'react';
 import ExhibitNav from './ExhibitNav';
-import BackgroundMusic from './BackgroundMusic';
 import '../page-transitions.css';
 
 const NavigationContext = createContext(null);
@@ -41,17 +40,20 @@ export default function SiteRouter({ Exhibition, Workbench, Cave, DamageAtlas, p
     const destination = new URL(href, location.href);
     if (destination.origin !== location.origin || !publicPaths.has(normalizePath(destination.pathname))) return;
     // popstate and hashchange can describe the same history traversal.
-    if (fromHistory && requested.current === destination.href) return;
+    if (fromHistory && requested.current === destination.href && !document.documentElement.dataset.huanbiTurn) return;
     positions.current.set(committed.current.href, scrollY);
-    // Align the directory before the old view is captured, including after resize.
-    if (!fromHistory && committed.current.pathname === '/' && normalizePath(destination.pathname) === '/' && ['#archive', '#treasures'].includes(destination.hash)) {
-      document.getElementById('exhibition')?.scrollIntoView({ behavior: 'instant' });
-    }
-    if (!fromHistory && destination.href !== location.href) history.pushState(null, '', destination.href);
-    requested.current = destination.href;
-    const next = { ...readLocation(++revision.current), fromHistory };
-    startTransition(() => setRoute(next));
-  }, []);
+    const commit = () => {
+      if (!fromHistory && committed.current.pathname === '/' && normalizePath(destination.pathname) === '/' && ['#archive', '#treasures'].includes(destination.hash)) {
+        document.getElementById('exhibition')?.scrollIntoView({ behavior: 'instant' });
+      }
+      if (!fromHistory && destination.href !== location.href) history.pushState(null, '', destination.href);
+      requested.current = destination.href;
+      const next = { ...readLocation(++revision.current), fromHistory };
+      startTransition(() => setRoute(next));
+    };
+    if (window.HuanbiTurn) window.HuanbiTurn.run(committed.current.href, destination.href, commit, () => preloaders[normalizePath(destination.pathname)]?.());
+    else commit();
+  }, [preloaders]);
 
   useEffect(() => {
     const previousRestoration = history.scrollRestoration;
@@ -107,11 +109,11 @@ export default function SiteRouter({ Exhibition, Workbench, Cave, DamageAtlas, p
     if (previous.pathname !== route.pathname) {
       document.querySelector('.exhibit-nav nav a[aria-current]')?.focus({ preventScroll: true });
     }
+    window.HuanbiTurn?.settled(route.href);
   }, [route]);
 
   const Page = route.pathname === '/workbench' ? Workbench : route.pathname === '/cave' ? Cave : route.pathname === '/damage-atlas' ? DamageAtlas : Exhibition;
   return <NavigationContext.Provider value={{ ...route, navigate, pending }}>
-    <BackgroundMusic />
     <Suspense fallback={<LoadingPage />}>
       <RouteFailure key={route.pathname}>
         <ViewTransition key={route.pathname} name="huanbi-page" default="none" share="auto" enter="fade-in" exit="fade-out">

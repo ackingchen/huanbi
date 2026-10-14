@@ -7,6 +7,7 @@ import { createCaveAudio } from './caveAudio';
 import CaveArtPicker from './components/CaveArtPicker';
 import collection from './treasures.json';
 import './Cave.css';
+import SeriesExplore from './components/SeriesExplore';
 
 const selectionKey='huanbi-cave-artworks-v1';
 function fromTreasure(entry) {
@@ -86,6 +87,7 @@ export default function Cave({ onSceneSettled }) {
       </article>)}</div>
       <p className="cave-footnote">本空间为敦煌风格的艺术化展厅，并非特定洞窟的实测复原。壁画选取自不同洞窟，具体出处见作品详情。<br/>水滴音效：<a href="https://opengameart.org/content/dripping-water" target="_blank" rel="noreferrer">Dripping Water — spookymodem</a>（<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noreferrer">CC BY 3.0</a>，播放时调低音量）。</p>
     </main>
+    <SeriesExplore active="cave" />
     <dialog ref={dialog} className="cave-dialog" onClose={()=>setSelected(null)} onClick={e=>{if(e.target===e.currentTarget)dialog.current.close();}}>
       {item&&<><button className="cave-close" aria-label="关闭壁画详情" autoFocus onClick={()=>dialog.current.close()}><X/></button><img src={item.image} alt={item.name}/><div><small>{item.era} / {item.location}</small><h2>{item.name}</h2><p>{item.description}</p>{item.source?<a href={item.source} target="_blank" rel="noreferrer">查看数字敦煌来源 ↗</a>:<><p>原文件：{item.originalFile}</p><a href={item.image} target="_blank" rel="noreferrer">打开壁画大图 ↗</a></>}</div></>}
     </dialog>

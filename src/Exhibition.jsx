@@ -2,9 +2,9 @@ import { lazy, memo, Suspense, useEffect, useLayoutEffect, useState, useTransiti
 import { useSiteNavigation } from './components/SiteRouter';
 import ScrollScene from './components/ScrollScene';
 import ExhibitNav from './components/ExhibitNav';
-import { ArrowUpRight } from 'lucide-react';
 import MuralArtwork, { SourceLink } from './components/MuralArtwork';
 import './Exhibition.css';
+import SeriesExplore from './components/SeriesExplore';
 
 import { exhibits } from './exhibits';
 
@@ -17,6 +17,7 @@ export default function Exhibition() {
   const [treasuresVisited, setTreasuresVisited] = useState(tab === 'treasures');
   const [scrollRequest, setScrollRequest] = useState(0);
   const [isPending, startTransition] = useTransition();
+  const opening = !(navigation?.hash ?? location.hash) || (navigation?.hash ?? location.hash) === '#top';
   useEffect(() => { if (tab === 'treasures') setTreasuresVisited(true); }, [tab]);
   // Commit the new panel and its scroll position together, before paint.
   useLayoutEffect(() => {
@@ -50,8 +51,8 @@ export default function Exhibition() {
     });
   };
   return <div id="top" className="exhibition-page">
-    <ScrollScene />
-    <main id="exhibition" className="exhibit-main">
+    {opening && <ScrollScene />}
+    <main id="exhibition" className="exhibit-main" hidden={opening}>
       <ExhibitNav active={tab} onSelect={selectTab} />
       <Suspense fallback={<div className="exhibit-panel-loading exhibit-width" role="status">正在展开珍藏…</div>}>
       <ViewTransition name="exhibition-panel" default="none" update="auto">
@@ -71,8 +72,7 @@ export default function Exhibition() {
       </div>
       </ViewTransition>
       </Suspense>
-      <section className="damage-atlas-promo exhibit-width"><div><p className="exhibit-kicker">知 其 美，也 知 其 脆 弱</p><h2>循着壁伤，读懂岁月。</h2><p>认识褪色、裂隙、起甲等六类常见病害，<br />从看见画面，到理解壁画的保护。</p></div><a href="/damage-atlas">打开壁画病害图鉴 <ArrowUpRight size={18} /></a></section>
-      <section id="method" className="exhibit-method exhibit-width"><p className="exhibit-kicker">画 卷 有 尽 · 新 生 未 完</p><h2>让岁月留痕，也让美再次发生。</h2><p>焕壁以数字技术探索壁画焕新的可能。<br />每一次生成都是视觉推演，真实的历史仍需考据与人工复核。</p><a className="exhibit-enter" href="/workbench">开启一次数字修复 <ArrowUpRight size={18} /></a></section>
+      <SeriesExplore active={tab} />
       <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href="#top">焕 壁</a><p>一 壁 千 年 · 一 眼 新 生</p><span>© 2026 HUANBI <a href="/admin">管理后台 ↗</a></span></footer>
     </main>
   </div>;
