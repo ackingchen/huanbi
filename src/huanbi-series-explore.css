@@ -1,0 +1,124 @@
+/* Further chapters: mineral pigments, rock, wood and mural fragments. */
+.series-explore{
+  padding:4.5rem 0 4rem;
+  margin-block:1.5rem 0;
+  border-top:1px solid #c4a06c66;
+  color:#f7edda;
+}
+.series-explore-heading{max-width:54rem;margin:0 auto 2.75rem;text-align:center}
+.series-explore .series-explore-kicker{font:1.75rem/1.6 var(--serif);letter-spacing:.18em;margin:0 0 1.15rem;color:#efd4a9}
+.series-explore .series-explore-heading h2{
+  font:400 clamp(2.5rem,3.7vw,3.5rem)/1.5 var(--brush);
+  letter-spacing:.04em;margin:0;color:#fff3da;-webkit-text-fill-color:currentColor;
+  -webkit-text-stroke:0;background:none;filter:none;text-shadow:none;
+}
+.series-explore .series-explore-intro{font:1.5rem/1.85 var(--serif);margin:1.2rem 0 0;color:#ede0c6;text-wrap:pretty}
+.series-explore-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem}
+.series-explore-card{
+  --seal-ink:#e8c18a;--card-ink:#f9e8c9;--card-muted:#e1cbaa;
+  --card-surface:linear-gradient(110deg,#402119ee,#4f322bb0),url('/images/materials/yellow_plaster.webp');
+  --card-art:url('/images/scroll/apsara.webp');
+  --card-frame:url('/images/materials/ornament-gold.svg');
+  isolation:isolate;position:relative;display:flex;flex-direction:column;min-width:0;
+  padding:3rem 2.75rem 3.25rem;border:0;
+  border-radius:0;color:var(--card-ink);background:none;box-shadow:none;
+}
+.series-explore-card::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
+  background:var(--card-frame) center/100% 100% no-repeat,var(--card-surface) center/cover;
+  border:1px solid #c7a06c66;box-shadow:inset 0 0 45px #1e100f35,0 12px 24px #080b0b44;
+  clip-path:polygon(0 12px,12px 0,97% 0,100% 3%,100% 96%,97% 100%,12px 100%,0 97%);
+}
+.series-explore-card::after{
+  content:"";position:absolute;right:0;bottom:4%;width:55%;height:62%;z-index:-1;
+  pointer-events:none;background:var(--card-art) center/contain no-repeat;opacity:.17;
+  mask-image:linear-gradient(90deg,transparent,#000 45%);
+}
+.series-explore-card[data-page=treasures]{
+  --card-surface:linear-gradient(105deg,#18322df5,#204440bb),url('/images/materials/blue_plaster_weathered.webp');
+  --card-art:url('/images/scroll/lotusRight.webp');--seal-ink:#e5c890;
+}
+.series-explore-card[data-page=workbench]{
+  --card-surface:linear-gradient(110deg,#291d14ef,#4f3424b8),url('/images/materials/wood_table_worn.webp');
+  --card-art:url('/images/huanbi-restoration-brush.svg');--seal-ink:#edc896;
+}
+.series-explore-card[data-page=workbench]::after{width:42%;height:54%;right:5%;opacity:.14;rotate:-15deg}
+.series-explore-card[data-page=cave]{
+  --card-surface:linear-gradient(105deg,#302114f2,#533b27b8),url('/images/materials/sandstone_cracks.webp');
+  --card-art:url('/images/exhibition-main-upper.webp');--seal-ink:#e3b976;
+}
+.series-explore-card[data-page=cave]::after{
+  width:45%;height:82%;right:3%;bottom:0;border-radius:50% 50% 0 0;
+  background-size:cover;opacity:.35;box-shadow:0 0 0 7px #bd935322;
+  mask-image:linear-gradient(90deg,transparent,#000 65%);
+}
+.series-explore-card[data-page=damage-atlas]{
+  --card-ink:#412c1b;--card-muted:#654b32;--seal-ink:#894829;
+  --card-surface:linear-gradient(100deg,#e6d1adee,#c4a173bf),url('/images/materials/worn_cracked_plaster.webp');
+  --card-art:url('/images/materials/worn_cracked_plaster.webp');--card-frame:url('/images/materials/ornament-umber.svg');
+}
+.series-explore-card[data-page=damage-atlas]::after{opacity:.2;clip-path:polygon(23% 0,97% 7%,100% 67%,74% 100%,0 81%,5% 32%)}
+.series-explore .series-explore-meta{font:1.5rem/1.65 var(--mono);letter-spacing:.04em;max-width:calc(100% - 5.75rem);color:var(--card-muted);margin:0 0 .8rem;overflow-wrap:anywhere}
+.series-explore-seal{
+  position:absolute;right:3.25rem;top:3.35rem;display:grid;place-items:center;
+  width:4.25rem;height:4.75rem;color:var(--seal-ink);font:400 2.75rem/1 var(--brush);
+  border:1px solid currentColor;outline:1px solid #78552c4d;outline-offset:3px;
+  transform:rotate(-4deg);
+}
+.series-explore .series-explore-card h3{font:400 2.5rem/1.5 var(--brush);letter-spacing:.06em;color:var(--card-ink);margin:0 5.75rem .55rem 0}
+.series-explore .series-explore-poem{font:1.5rem/1.7 var(--serif);color:var(--card-ink);margin:.2rem 0 .75rem;text-wrap:pretty}
+.series-explore .series-explore-description{font:1.375rem/1.85 var(--serif);color:var(--card-muted);margin:0 0 1.75rem;text-wrap:pretty}
+.series-explore .series-explore-link{
+  --series-symbol:url('/images/huanbi-button-scroll.svg');
+  position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:.65rem;
+  width:fit-content;max-width:100%;min-height:4.5rem;margin-top:auto;padding:1rem 1.5rem;
+  color:#4c2e15;font:500 1.375rem/1.5 var(--serif);text-align:center;text-decoration:none;
+  background:linear-gradient(115deg,#ae8247,#ddbf86 45%,#b38c54);border:1px solid #e9cf9899;letter-spacing:.035em;cursor:pointer;
+  border-radius:2px 14px 2px 14px;box-shadow:inset 0 0 0 3px #70502325;
+  filter:drop-shadow(0 4px 5px #6746242e);transition:filter .18s ease,transform .18s ease;
+}
+.series-explore-link[data-symbol=brush]{--series-symbol:url('/images/huanbi-restoration-brush.svg')}
+.series-explore-link[data-symbol=atlas]{--series-symbol:url('/images/huanbi-button-atlas.svg')}
+.series-explore-link::before{content:"";width:1.7rem;height:1.7rem;flex:0 0 1.7rem;background:var(--series-symbol) center/contain no-repeat;filter:sepia(1) saturate(.6);pointer-events:none}
+.series-explore-link::after{content:none}
+.series-explore-link>svg{flex-shrink:0;stroke-width:1.5;width:1.1rem;height:1.1rem}
+.series-explore .series-explore-link:focus-visible{outline:2px solid #4d3820;outline-offset:5px;box-shadow:0 0 0 7px #f9e6bd80}
+@media (hover:hover){.series-explore .series-explore-link:hover{color:#3d2412;filter:brightness(1.06) drop-shadow(0 6px 8px #67462440);transform:translateY(-2px)}}
+.series-explore .series-explore-link:active{transform:translateY(1px)}
+@media (width<=1099px){
+  .series-explore-card{padding:3rem 2rem 3.5rem}
+  .series-explore-seal{right:2rem;top:2.9rem}
+  .series-explore .series-explore-poem{font-size:1.375rem}
+  .series-explore .series-explore-description{font-size:1.25rem}
+  .series-explore .series-explore-link{font-size:1.25rem;padding-inline:1.2rem;gap:.5rem}
+}
+@media (width<=767px){
+  .series-explore{padding:3rem 0;margin-top:1rem}
+  .series-explore-heading{margin-bottom:2rem}
+  .series-explore .series-explore-kicker{font-size:1.375rem;letter-spacing:.12em}
+  .series-explore .series-explore-heading h2{font-size:2.25rem;line-height:1.55;text-wrap:balance}
+  .series-explore .series-explore-intro{font-size:1.25rem;line-height:1.8}
+  .series-explore-grid{grid-template-columns:minmax(0,1fr);gap:1.4rem}
+  .series-explore-card{padding:3rem 2rem 3.5rem}
+  .series-explore-card::after{width:65%;opacity:.14}
+  .series-explore .series-explore-meta{font-size:1.25rem;max-width:calc(100% - 4.75rem)}
+  .series-explore-seal{top:3rem;right:2.1rem;width:3.5rem;height:4rem;font-size:2.5rem}
+  .series-explore .series-explore-card h3{font-size:2.25rem;margin-right:4.75rem}
+  .series-explore .series-explore-poem{font-size:1.25rem}
+  .series-explore .series-explore-description{font-size:1.25rem;margin-bottom:1.5rem}
+  .series-explore .series-explore-link{font-size:1.25rem;padding-inline:1.1rem;min-height:4.25rem}
+}
+@media (width<=359px){
+  .series-explore-card{padding-inline:1.5rem}
+  .series-explore-seal{right:1.6rem}
+  .series-explore .series-explore-card h3{font-size:2rem}
+  .series-explore .series-explore-link{font-size:1.125rem;gap:.4rem;padding-inline:1rem}
+  .series-explore-link::before{width:1.4rem;height:1.4rem;flex-basis:1.4rem}
+}
+@media (prefers-reduced-motion:reduce){.series-explore .series-explore-link{transition:none;transform:none}}
+@media (forced-colors:active){
+  .series-explore,.series-explore-card{color:CanvasText;background:Canvas;border-color:CanvasText;box-shadow:none}
+  .series-explore :is(.series-explore-kicker,.series-explore-intro,.series-explore-meta,.series-explore-poem,.series-explore-description,h2,h3){color:CanvasText;-webkit-text-fill-color:CanvasText}
+  .series-explore-card::before,.series-explore-card::after,.series-explore-link::before,.series-explore-link::after{display:none}
+  .series-explore .series-explore-link{border:1px solid LinkText;color:LinkText;filter:none}
+}

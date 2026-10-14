@@ -1,0 +1,248 @@
+/* A paper-and-ink workspace, shared by sign-in and service settings. */
+body:has(.admin-app){
+  background:
+    linear-gradient(110deg,#f5eddde8,#f6f0e5e8 60%,#e9dac3e3),
+    url('/images/scroll/background.webp') center/cover;
+}
+.admin-app{
+  --p:#f6efdf;
+  --ink:#3d3022;
+  --muted:#6e5e4b;
+  --line:#b8a17b;
+  --red:#9a4d33;
+  --sage:#655e44;
+  width:min(92%,1380px);
+  max-width:1380px;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  color:var(--ink);
+  font-size:1.25rem;
+}
+.admin-app>header{min-height:6rem;height:auto;gap:1.5rem;padding:1rem 0;border-color:#a9895566}
+.admin-app .brand{font-family:var(--brush);font-size:2rem;gap:.85rem;letter-spacing:.08em;font-weight:400}
+.admin-app .brand>b{
+  width:3.25rem;height:3.25rem;display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(140deg,#a96543,#78432c);border:1px solid #9d7146;
+  box-shadow:inset 0 0 0 3px #ead1a744,inset 0 0 0 4px #f2dda380,2px 2px #ac84534d;
+  color:#fff1d5;font-size:2rem;font-weight:400;transform:rotate(-3deg);
+}
+.admin-app .brand small{max-width:none;margin:0;font:1.125rem/1.6 var(--serif);letter-spacing:.06em;color:var(--muted)}
+.admin-app .nav-cta{
+  display:inline-flex;align-items:center;justify-content:center;min-height:3.5rem;
+  padding:.75rem 1.1rem;border:1px solid #9f7a4d88;border-radius:.35rem;
+  background:linear-gradient(120deg,#e8d3ac80,#f7eedb9e);font-size:1.125rem;color:#62472c;
+  transition:background .18s,border-color .18s;
+}
+.admin-app .nav-cta:hover{background:linear-gradient(120deg,#ddc397,#f1e2c5);border-color:#8d683e}
+.admin-main{flex:1;min-height:0;padding:3rem 0 3.5rem}
+.admin-app .heading{margin-bottom:2.25rem;gap:2rem;align-items:center}
+.admin-app .heading>div{min-width:0}
+.admin-app .eyebrow{color:#82552f;font:1rem/1.6 var(--mono);letter-spacing:.13em}
+.admin-app .admin-title{font:400 clamp(2.75rem,4.4vw,4.3rem)/1.4 var(--brush);letter-spacing:.02em;margin:.8rem 0 1rem}
+.admin-app .admin-title i{font-style:normal;color:#8c4e2d}
+.admin-app .admin-sub{font-size:1.375rem;line-height:1.9;max-width:32rem;color:var(--muted);text-wrap:pretty}
+.admin-main:has(.login-card){
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);
+  align-items:center;gap:2rem clamp(2rem,5vw,5rem);padding-block:3rem;
+}
+.admin-main:has(.login-card)>.heading{margin:0;grid-column:1;grid-row:1}
+.admin-main:has(.login-card) .admin-title i{display:block;margin-top:.15rem}
+.admin-main:has(.login-card) .heading>div::after{
+  content:"";display:block;max-width:35rem;height:12rem;margin-top:2.25rem;
+  background:url('/images/scroll/distant.webp') left bottom/contain no-repeat;
+  opacity:.8;pointer-events:none;
+}
+.admin-main:has(.login-card)>.admin-alert{grid-column:2;margin:0;align-self:end;max-width:35rem;justify-self:end;width:100%}
+.admin-main:has(.login-card)>.login-card{grid-column:2;grid-row:1}
+.admin-main:has(.login-card)>.admin-alert~.login-card{grid-row:auto;align-self:start}
+.admin-app .card{
+  isolation:isolate;position:relative;border:1px solid #b496636e;
+  background:
+    radial-gradient(ellipse at 0 0,#f3d99e52,transparent 65%),
+    linear-gradient(135deg,#fff7e9f2,#eee1c9f5);
+  border-radius:.5rem 1.8rem .5rem 1.8rem;
+  padding:2rem;box-shadow:0 12px 32px #70512c14,inset 0 1px #fff9e6;
+}
+.admin-app .card::before{content:"";position:absolute;inset:.55rem;border:1px solid #af8a5030;border-radius:.2rem 1.3rem .2rem 1.3rem;pointer-events:none;z-index:-1}
+.admin-app .login-card{
+  box-sizing:border-box;width:100%;max-width:38rem;margin:0;justify-self:end;
+  padding:3.6rem 3.2rem 4.2rem;border:0;border-radius:0;background:none;box-shadow:none;
+  --muted:#594023;color:#49321c;
+}
+.admin-app .login-card::before{
+  inset:0;border:0;border-radius:0;
+  background:url('/images/huanbi-atlas-scroll-mobile.svg?v=20261012-deep-wear-5') center/100% 100% no-repeat;
+  filter:drop-shadow(0 12px 16px #65452030);
+}
+.admin-app .login-card>svg{
+  box-sizing:content-box;width:2rem;height:2rem;padding:.8rem;color:#65411f;
+  background:linear-gradient(135deg,#d6b87666,#a47b3f33);border:1px solid #80572c;
+  outline:1px solid #80572c66;outline-offset:3px;border-radius:0;stroke-width:1.6;
+}
+.admin-app .login-card h2,.admin-app .admin-cards h2{font:400 2rem/1.5 var(--serif);margin:1rem 0 .7rem;color:#49341e}
+.admin-app .login-card h2{font-family:var(--brush);font-size:2.5rem;line-height:1.6;color:#4d3118}
+.admin-app .login-card>p{color:var(--muted);font-size:1.25rem;line-height:1.8;margin:.7rem 0 1.5rem}
+.admin-app label{font-size:1.25rem;line-height:1.6;margin-top:1.35rem;gap:.7rem;color:#4d3b26}
+.admin-app :is(input:not([type=checkbox]),select,textarea){
+  width:100%;min-width:0;min-height:3.6rem;border:1px solid #a4895b;
+  border-radius:.4rem;padding:.85rem 1rem;color:var(--ink);
+  background:#fffbf1;font:1.25rem/1.6 var(--serif);
+  box-shadow:inset 0 2px 4px #7656300a;
+  transition:border-color .18s,box-shadow .18s,background .18s;
+}
+.admin-app :is(input[type=password],input[type=url]){font-family:var(--mono);font-size:1.125rem}
+.admin-app :is(input,textarea)::placeholder{color:#786955;opacity:1}
+.admin-app :is(input:not([type=checkbox]),select,textarea):focus{border-color:#815735;background:#fffdf7;box-shadow:0 0 0 3px #b48a4430}
+.admin-app .login-card small,.admin-app .help{font-size:1.125rem;line-height:1.8;color:var(--muted)}
+.admin-app .login-card small{margin:.7rem 0 1.6rem}
+.admin-app .ui-button{
+  min-height:3.6rem;padding:.85rem 1.3rem;border-radius:.4rem;
+  font:500 1.25rem/1.6 var(--serif);gap:.65rem;
+}
+.admin-app .ui-default{
+  color:#fff5df;border:1px solid #7f502b;
+  background:linear-gradient(120deg,#956139,#7d492c 55%,#8c582d);
+  box-shadow:inset 0 1px #e3bb7c45,0 5px 12px #7652301a;
+}
+.admin-app .ui-default:hover:not(:disabled){background:linear-gradient(120deg,#85512c,#68391f 55%,#79451f);transform:translateY(-1px)}
+.admin-app .ui-button:active:not(:disabled){transform:translateY(1px)}
+.admin-app .login-card label{color:#4d341c}
+.admin-app .login-card input{
+  color:#49321c;background:linear-gradient(115deg,#f2e4c6,#e8d5ad);
+  border-color:#815a2f;border-radius:2px 9px 2px 9px;
+}
+.admin-app .login-card input:focus{background:#f5e8cc;border-color:#65411f;box-shadow:0 0 0 3px #72502730}
+.admin-app .login-card .ui-button{
+  isolation:isolate;position:relative;min-height:4.25rem;font-size:1.5rem;letter-spacing:.2em;
+  color:#4c2e15;border:0;border-radius:0;background:transparent;box-shadow:none;
+  filter:drop-shadow(0 4px 5px #65452030);
+}
+.admin-app .login-card .ui-button::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:url('/images/huanbi-module-plaque.svg?v=20261012-1') center/100% 100% no-repeat;
+}
+.admin-app .login-card .ui-button:hover:not(:disabled){background:transparent;transform:none;filter:brightness(1.06) drop-shadow(0 5px 7px #65452040)}
+.admin-app .login-card .ui-button:active:not(:disabled){transform:none;filter:brightness(.97)}
+.admin-app .login-card .ui-button:disabled{background:transparent;color:#4c2e15;opacity:.6}
+.admin-app .ui-outline{background:linear-gradient(120deg,#e8d3ac80,#f7eedb9e);border:1px solid #9f7a4d;color:#62472c}
+.admin-app :is(input,select,textarea,button):disabled{background:#e7dfd0;color:#746956;border-color:#b4a58c;box-shadow:none;cursor:not-allowed}
+.admin-app :is(a,button,input,select,textarea):focus-visible{outline:2px solid #87542e;outline-offset:4px}
+.admin-app .admin-layout{grid-template-columns:18rem minmax(0,1fr);gap:2rem;align-items:start}
+.admin-app .admin-aside{padding:1.6rem;background:linear-gradient(135deg,#e0cba6aa,#f0e5cf80);border:1px solid #b4966352;border-radius:.4rem 1.3rem .4rem 1.3rem}
+.admin-app .admin-aside>svg{color:#8a6337;width:2rem;height:2rem;stroke-width:1.5}
+.admin-app .admin-aside h2{font:400 1.7rem/1.6 var(--serif);margin:.6rem 0}
+.admin-app .admin-aside p{font-size:1.125rem;line-height:1.85;color:var(--muted)}
+.admin-app .admin-aside code{font-size:.95em;overflow-wrap:anywhere}
+.admin-app .key-status{font-size:1rem;line-height:1.6;gap:.4rem;flex-wrap:wrap;color:#59452b;background:#ead9b9;border:1px solid #b4975f88;padding:.6rem .7rem;border-radius:.3rem}
+.admin-app .admin-cards{gap:1.6rem}
+.admin-app .admin-cards h2{margin:.5rem 0 1.3rem}
+.admin-app .admin-cards .eyebrow{font-size:.9rem;margin:0}
+.admin-app .admin-row{grid-template-columns:minmax(0,1fr);gap:.25rem}
+.admin-app .admin-row label{min-width:0}
+.admin-app .admin-row select{min-width:0}
+.admin-app .checkbox-label{font-size:1.125rem;gap:.7rem;min-height:3rem}
+.admin-app .checkbox-label input{width:1.3rem;height:1.3rem;flex-shrink:0;accent-color:#965635}
+.admin-app .admin-save{padding:1.5rem 0 .2rem;border-top:1px solid #b7996252;gap:1rem}
+.admin-app .admin-save>span{font-size:1.125rem;color:var(--muted)}
+.admin-app .admin-alert,.admin-app .admin-success{font-size:1.125rem;line-height:1.8;border-radius:.4rem;padding:1rem 1.25rem}
+.admin-app .admin-alert{color:#873f27;background:#f5e1cd;border-color:#b9784f}
+.admin-app .admin-success{color:#415338;background:#e9ead1;border-color:#89996c}
+.admin-app>footer{margin-top:0;padding:1.5rem 0;font-size:1.0625rem;line-height:1.8;color:var(--muted);border-color:#a9895566}
+/* Settings continue the paper palette with larger working text. */
+.admin-main:has(.admin-layout) .admin-sub{font-size:1.5rem;max-width:40rem}
+.admin-app .admin-layout{grid-template-columns:19rem minmax(0,1fr);gap:2.25rem}
+.admin-app .admin-aside{
+  padding:1.8rem 1.7rem 2rem;
+  background:radial-gradient(circle at 85% 10%,#fff4d866,transparent 36%),linear-gradient(145deg,#e4cda4d9,#f2e6cdb8);
+  border-color:#b496637a;
+  box-shadow:0 10px 24px #76512a10,inset 0 1px #fff8e4;
+}
+.admin-app .admin-aside h2{font-size:1.9rem;margin:.65rem 0 .8rem;color:#513b25}
+.admin-app .admin-aside p{font-size:1.25rem}
+.admin-app .admin-aside code{font-size:1.125rem;line-height:1.8}
+.admin-app .key-status{font-size:1.125rem;padding:.65rem .75rem;background:linear-gradient(120deg,#e4d7b7,#f0e5cb);border-color:#a8925f}
+.admin-app .admin-cards{gap:1.8rem}
+.admin-app .admin-cards .card{
+  padding:2.15rem 2.2rem 2.25rem;
+  background:radial-gradient(ellipse at 0 0,#f3d99e66,transparent 58%),linear-gradient(135deg,#fff7e9f5,#eee1c9f5);
+  border-color:#b496638c;
+}
+.admin-app .admin-cards h2{font-size:2.25rem;margin:.55rem 0 1.45rem}
+.admin-app .admin-cards .eyebrow{font-size:1rem;color:#82552f}
+.admin-app .admin-cards label{font-size:1.375rem;gap:.8rem;margin-top:1.5rem}
+.admin-app .admin-cards :is(input:not([type=checkbox]),select,textarea){font-size:1.375rem;min-height:3.8rem}
+.admin-app .admin-cards :is(input[type=url],input[type=password]){font-size:1.25rem}
+.admin-app .admin-cards .help{font-size:1.25rem;line-height:1.85}
+.admin-app .admin-cards .checkbox-label{font-size:1.25rem;line-height:1.8}
+.admin-app .admin-cards .checkbox-label input{width:1.4rem;height:1.4rem;margin-inline:0}
+.admin-app .admin-save{padding-top:1.6rem}
+.admin-app .admin-save>span{font-size:1.25rem}
+.admin-app .admin-save .ui-button{font-size:1.375rem;min-width:11rem}
+@media (width>=1280px){
+  .admin-app .admin-row{grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:1.5rem}
+}
+@media (width>=960px){
+  .admin-app .admin-aside{position:sticky;top:1.5rem}
+  .admin-main:has(.login-card):has(>.admin-alert){grid-template-rows:auto auto;align-content:center;row-gap:1.25rem}
+  .admin-main:has(.login-card):has(>.admin-alert)>.heading{grid-row:1 / span 2}
+  .admin-main:has(.login-card)>.admin-alert{grid-row:1}
+  .admin-main:has(.login-card)>.admin-alert~.login-card{grid-row:2}
+}
+@media (width<=959px){
+  .admin-main:has(.login-card){grid-template-columns:minmax(0,1fr);gap:2rem;padding-block:2rem}
+  .admin-main:has(.login-card)>.heading{grid-row:auto}
+  .admin-main:has(.login-card)>.login-card,.admin-main:has(.login-card)>.admin-alert{grid-column:1;grid-row:auto;justify-self:center}
+  .admin-main:has(.login-card) .admin-title i{display:inline}
+  .admin-main:has(.login-card) .heading>div::after{display:none}
+  .admin-app .admin-layout{grid-template-columns:minmax(0,1fr)}
+  .admin-app .admin-sub{max-width:none}
+}
+@media (width<=599px){
+  .admin-app{width:calc(100% - 2rem);font-size:1.125rem}
+  .admin-app>header{gap:.75rem;min-height:5.5rem;padding:.8rem 0}
+  .admin-app .brand{font-size:1.7rem;gap:.5rem}
+  .admin-app .brand>b{width:2.6rem;height:2.6rem;font-size:1.7rem}
+  .admin-app .brand small{display:none}
+  .admin-app .nav-cta{font-size:1rem;padding:.55rem .75rem;min-height:3rem}
+  .admin-app .admin-title{font-size:2.6rem;line-height:1.5;text-wrap:balance}
+  .admin-app .heading{align-items:flex-start;gap:1.25rem}
+  .admin-main:has(.login-card) .admin-title i{display:block}
+  .admin-app .eyebrow{font-size:.875rem;letter-spacing:.08em}
+  .admin-app .admin-sub{font-size:1.125rem;line-height:1.85}
+  .admin-app .card{padding:1.6rem 1.35rem;border-radius:.4rem 1.3rem .4rem 1.3rem}
+  .admin-app .login-card{padding:3rem 1.75rem 3.5rem;border-radius:0}
+  .admin-app .admin-cards .card{padding:1.6rem 1.35rem}
+  .admin-main:has(.admin-layout) .admin-sub{font-size:1.25rem}
+  .admin-app .admin-aside{padding:1.4rem}
+  .admin-app .admin-aside h2{font-size:1.7rem}
+  .admin-app .admin-aside p{font-size:1.125rem}
+  .admin-app .admin-aside code{font-size:1rem}
+  .admin-app .admin-cards h2{font-size:1.8rem}
+  .admin-app .admin-cards :is(label,.checkbox-label){font-size:1.25rem}
+  .admin-app .admin-cards :is(input:not([type=checkbox]),select,textarea){font-size:1.25rem;min-height:3.4rem}
+  .admin-app .admin-cards :is(input[type=url],input[type=password]){font-size:1.0625rem}
+  .admin-app .admin-cards .help,.admin-app .admin-save>span{font-size:1.125rem}
+  .admin-app .admin-save .ui-button{font-size:1.25rem}
+  .admin-app .login-card h2{font-size:2rem}
+  .admin-app .login-card>p,.admin-app label{font-size:1.125rem}
+  .admin-app .login-card small,.admin-app .help{font-size:1rem}
+  .admin-app :is(input:not([type=checkbox]),select,textarea){font-size:1.125rem;min-height:3.25rem;padding:.75rem .8rem}
+  .admin-app :is(input[type=password],input[type=url]){font-size:1rem}
+  .admin-app .ui-button{min-height:3.25rem;font-size:1.125rem}
+  .admin-app .login-card .ui-button{font-size:1.375rem}
+  .admin-app .admin-main{padding-bottom:2rem}
+  .admin-app .admin-save{align-items:stretch}
+  .admin-app .admin-save .ui-button{width:100%}
+  .admin-app .admin-alert,.admin-app .admin-success{font-size:1rem}
+  .admin-app>footer{font-size:.95rem;padding:1.2rem 0}
+}
+@media (prefers-reduced-motion:reduce){.admin-app :is(a,button,input,select,textarea){transition:none;transform:none!important}}
+@media (forced-colors:active){
+  body:has(.admin-app),.admin-app .card,.admin-app .admin-aside{background:Canvas;color:CanvasText;box-shadow:none}
+  .admin-app .card::before,.admin-main:has(.login-card) .heading>div::after{display:none}
+  .admin-app .ui-button,.admin-app .nav-cta{border-color:ButtonText;background:ButtonFace;color:ButtonText;box-shadow:none}
+  .admin-app .login-card{border:1px solid CanvasText}
+  .admin-app .login-card .ui-button{border:1px solid ButtonText;background:ButtonFace;color:ButtonText;filter:none}
+  .admin-app .login-card .ui-button::before{display:none}
+}

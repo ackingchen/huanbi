@@ -1,0 +1,86 @@
+/* Shared plaque buttons: sand, parchment and mountain-grey gradients. */
+:is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter){
+  isolation:isolate;
+  position:relative;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:.8rem;
+  width:fit-content;
+  max-width:100%;
+  min-height:5rem;
+  padding:1.1rem 2rem;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:#493722;
+  font-family:var(--serif);
+  font-size:1.375rem;
+  font-weight:500;
+  line-height:1.5;
+  letter-spacing:.05em;
+  text-decoration:none;
+  text-align:center;
+  cursor:pointer;
+  text-shadow:0 1px #fff0ce40;
+  filter:drop-shadow(0 5px 9px #47321f30);
+  transition:filter .18s ease,transform .18s ease,color .18s ease;
+}
+.chapter-three>a{--art-button-symbol:url('/images/huanbi-button-scroll.svg?v=20261012-sand')}
+.scroll-stage .chapter-three{translate:0 -2rem}
+@media (width>=768px) and (height<=800px){
+  .scroll-stage .chapter-three{translate:0 min(-2rem,calc((100svh - 800px)*.65))}
+}
+.damage-atlas-promo>a{--art-button-symbol:url('/images/huanbi-button-atlas.svg?v=20261012-sand');justify-self:end}
+a.exhibit-enter{
+  --art-button-symbol:url('/images/huanbi-restoration-brush.svg?v=20261012-sand-grey-3');
+  --art-button-frame:url('/images/huanbi-restoration-frame.svg?v=20261012-sand-grey-3');
+  color:#3f4336;
+  text-shadow:0 1px #fff0ce40;
+}
+:is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter)::before{
+  content:"";
+  display:block;
+  width:2rem;
+  height:2rem;
+  flex:0 0 2rem;
+  background:var(--art-button-symbol) center/contain no-repeat;
+  pointer-events:none;
+}
+:is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter)::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  border:24px solid transparent;
+  border-image:var(--art-button-frame,url('/images/huanbi-button-frame.svg?v=20261012-sand')) 24 fill / 24px / 0 stretch;
+  pointer-events:none;
+}
+:is(.damage-atlas-promo>a,.exhibit-enter)>svg{width:1.1rem;height:1.1rem;flex-shrink:0;stroke-width:1.5}
+@media (hover:hover){
+  :is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter):hover{
+    color:#392917;
+    background:transparent;
+    filter:brightness(1.06) drop-shadow(0 7px 12px #47321f40);
+    transform:translateY(-2px);
+  }
+  a.exhibit-enter:hover{color:#2d372f}
+}
+:is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter):active{transform:translateY(1px);filter:brightness(.96)}
+:is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter):focus-visible{outline:2px solid #ebc98c;outline-offset:5px;box-shadow:0 0 0 7px #49372280}
+@media (width<=767px){
+  :is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter){min-height:4.5rem;padding:1rem 1.35rem;gap:.6rem;font-size:1.25rem;letter-spacing:.025em}
+  :is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter)::before{width:1.6rem;height:1.6rem;flex-basis:1.6rem}
+  .damage-atlas-promo>a{justify-self:start}
+}
+@media (width<=767px) and (height<=600px){
+  .scroll-stage .chapter-three{top:auto;bottom:5rem;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  :is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter){transition:none}
+  :is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter):is(:hover,:active){transform:none}
+}
+@media (forced-colors:active){
+  :is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter){border:1px solid ButtonText;color:LinkText;filter:none}
+  :is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter)::before,:is(.chapter-three>a,.damage-atlas-promo>a,.exhibit-enter)::after{display:none}
+}

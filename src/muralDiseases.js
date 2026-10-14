@@ -2,7 +2,7 @@
 // Conservation context: Getty's Mogao project and ICOMOS wall-painting principles.
 export const diseases = [
   {
-    id: 'fading', name: '褪色', english: 'FADING', word: '色', position: [23, 25], layers: ['paint'],
+    id: 'fading', name: '褪色', english: 'FADING', position: [23, 25], layers: ['paint'],
     summary: '颜色渐淡，画面的明暗与层次不再清晰。',
     appearance: ['同一画面中，局部色彩显得浅淡，原有色差减弱。', '人物、纹样与背景之间的层次变得不易辨认。', '需结合旧照片、颜料和保存状况比较，不能只凭一张照片判断。'],
     causes: ['光照、颜料性质与环境变化都可能影响色彩稳定性。', '颜料颗粒流失或表面磨损，也可能让颜色显得浅淡。', '表面附着物、拍摄曝光和白平衡可能造成类似的视觉变化。'],
@@ -10,7 +10,7 @@ export const diseases = [
     distinction: '褪色与化学变色不同；颜色变暗或变色，不一定属于褪色。',
   },
   {
-    id: 'cracks', name: '裂隙', english: 'CRACKS', word: '裂', position: [76, 23], layers: ['paint', 'plaster', 'wall'],
+    id: 'cracks', name: '裂隙', english: 'CRACKS', position: [76, 23], layers: ['paint', 'plaster', 'wall'],
     summary: '细线划过画面，可能延伸至更深的结构。',
     appearance: ['表面出现线状开裂，有时分叉或呈网状。', '裂隙可贯穿纹样，也可能沿材料交界处延伸。', '观察宽度、方向与是否变化，有助于判断其稳定状态。'],
     causes: ['地仗材料干缩或不同材料之间的变形差异，可能引发开裂。', '温湿度波动、壁体运动或外部振动可能促使裂隙发展。', '表面裂纹与结构性裂缝成因不同，需要结合深度和现场信息判断。'],
@@ -18,7 +18,7 @@ export const diseases = [
     distinction: '裂隙是开裂的线状痕迹；脱落则是材料已经缺失。',
   },
   {
-    id: 'flaking', name: '起甲', english: 'FLAKING', word: '翘', position: [24, 56], layers: ['paint', 'plaster'],
+    id: 'flaking', name: '起甲', english: 'FLAKING', position: [23, 52], layers: ['paint', 'plaster'],
     summary: '薄片边缘翘起，色层与下层的结合逐渐变弱。',
     appearance: ['彩绘层或薄层表面呈片状翘起，边缘可见细小阴影。', '局部可能呈卷曲或鳞片状，画面仍在，但附着已不稳定。', '它与地仗层的空鼓并不等同，需要辨明分离发生在哪一层。'],
     causes: ['彩绘层与地仗层之间的附着力减弱，可能造成起甲。', '材料老化、湿度波动与盐分活动，都可能影响层间结合。', '不同材料的胀缩差异也可能使薄层逐渐翘起。'],
@@ -26,7 +26,7 @@ export const diseases = [
     distinction: '起甲是薄片翘起但尚未完全脱离；进一步发展可能形成脱落。',
   },
   {
-    id: 'loss', name: '脱落', english: 'MATERIAL LOSS', word: '缺', position: [72, 58], layers: ['paint', 'plaster'],
+    id: 'loss', name: '脱落', english: 'MATERIAL LOSS', position: [76, 54], layers: ['paint', 'plaster'],
     summary: '彩绘或地仗已经缺失，露出下方的材料。',
     appearance: ['画面中出现缺失区域，边缘常不规则。', '浅层缺失可能露出地仗；更深的缺失可能露出壁体。', '区分色层缺失与地仗缺失，有助于理解损伤的层次。'],
     causes: ['附着力下降、起甲或层间分离，可能导致材料脱落。', '水分与盐分活动、机械扰动等，也可能促成局部缺失。', '一处缺失可能由多个因素共同造成，形状本身不足以确定成因。'],
@@ -34,7 +34,7 @@ export const diseases = [
     distinction: '缺失区露出的底层不一定是“原来底色”，也不等于壁体本身。',
   },
   {
-    id: 'soot', name: '烟熏', english: 'SOOT DEPOSITION', word: '暗', position: [24, 84], layers: ['surface'],
+    id: 'soot', name: '烟熏', english: 'SOOT DEPOSITION', position: [24, 81], layers: ['surface'],
     summary: '烟尘附着在表面，使线条与颜色被暗色覆盖。',
     appearance: ['画面表面可见灰黑色附着，局部呈雾状或积聚状。', '原有色彩与线条可能被遮蔽，而非已经消失。', '暗色颜料、自然变色和灰尘也可能呈现相似外观。'],
     causes: ['历史燃烧活动产生的烟尘，可能沉积在壁画表面。', '烟尘的分布与空气流动、表面性质和活动位置有关。', '烟尘可能与其他附着物混合，需要材料与现场信息辅助辨认。'],
@@ -42,7 +42,7 @@ export const diseases = [
     distinction: '看到黑色区域不能直接断定烟熏，应先区分颜料、变色与表面附着。',
   },
   {
-    id: 'salts', name: '盐害', english: 'SALT DAMAGE', word: '霜', position: [77, 84], layers: ['surface', 'paint', 'plaster'],
+    id: 'salts', name: '盐害', english: 'SALT DAMAGE', position: [76, 82], layers: ['surface', 'paint', 'plaster'],
     summary: '盐分随水分迁移与结晶，影响壁画材料的稳定。',
     appearance: ['表面可能出现白色晶体、粉末或霜状附着。', '盐分也可能在材料内部结晶，伴随粉化、起甲或脱落。', '白色附着并不一定是盐，单凭照片也无法判断盐的种类。'],
     causes: ['可溶性盐可来自壁体、地仗或外来水分等多种来源。', '水分促使盐分迁移，蒸发和环境变化可能引起结晶。', '反复的溶解与结晶过程，可能使多孔材料受到破坏。'],

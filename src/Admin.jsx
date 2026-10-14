@@ -105,7 +105,7 @@ export default function Admin() {
         <a className="brand" href="/">
           <b>焕</b>焕壁<small>管理工作室</small>
         </a>
-        <a className="nav-cta" href="/">
+        <a className="nav-cta" href="/workbench">
           返回修复工作台 ↗
         </a>
       </header>

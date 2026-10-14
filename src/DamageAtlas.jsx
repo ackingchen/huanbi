@@ -4,6 +4,7 @@ import ExhibitNav from './components/ExhibitNav';
 import DamageSpecimen from './components/DamageSpecimen';
 import { atlasSources, diseases } from './muralDiseases';
 import './DamageAtlas.css';
+import SeriesExplore from './components/SeriesExplore';
 
 const sections = [['appearance', '如何辨认'], ['causes', '常见成因'], ['care', '保护思路']];
 const readSelection = () => diseases.find(item => `#${item.id}` === location.hash)?.id || diseases[0].id;
@@ -52,16 +53,16 @@ export default function DamageAtlas() {
       </section>
       <section className="damage-directory" aria-label="六类壁画病害">
         {diseases.map((item, index) => <button key={item.id} aria-label={`了解${item.name}`} aria-pressed={selected === item.id} onClick={() => select(item.id)}>
-          <span className="damage-directory-number">0{index + 1}</span><span className="damage-directory-word" aria-hidden="true">{item.word}</span><span className="damage-directory-name">{item.name}</span><small>{item.english}</small>
+          <span className="damage-directory-number">0{index + 1}</span><span className="damage-directory-name">{item.name}</span><small>{item.english}</small>
         </button>)}
       </section>
       <section className="damage-observatory" aria-labelledby="damage-observatory-title">
         <div className="damage-section-heading"><div><p className="damage-kicker">循 痕 识 病</p><h2 id="damage-observatory-title">一幅画，六种岁月痕迹。</h2></div><p>点选画面标记或上方病害，展开观察。</p></div>
         <div className="damage-observation-grid">
           <figure className="damage-figure">
-            <div className="damage-figure-toolbar"><span>病害观察台</span><div><button aria-pressed={single} onClick={() => setSingle(!single)}><Layers size={16} />{single ? '显示全部病害' : '只看当前病害'}</button><button aria-pressed={markers} onClick={() => setMarkers(!markers)}>{markers ? <EyeOff size={16} /> : <Eye size={16} />}{markers ? '隐藏观察标记' : '显示观察标记'}</button></div></div>
+            <div className="damage-figure-toolbar"><span>病害观察台</span><div><button aria-pressed={single} onClick={() => setSingle(!single)}><Layers size={16} />{single ? '查看完整画面' : '放大当前病害'}</button><button aria-pressed={markers} onClick={() => setMarkers(!markers)}>{markers ? <EyeOff size={16} /> : <Eye size={16} />}{markers ? '隐藏观察标记' : '显示观察标记'}</button></div></div>
             <DamageSpecimen selected={selected} onSelect={select} single={single} markers={markers} />
-            <figcaption><span>教学示意 · 非实物病害标注</span><span>示意图用于理解外观特征，不能据此判断真实病因。</span></figcaption>
+            <figcaption><span>AI 绘制教学示意 · 非实物病害标注</span><span>示意图用于理解外观特征，不能据此判断真实病因。</span></figcaption>
           </figure>
           <div className="damage-detail" aria-live="polite">
             <p className="damage-kicker">0{diseases.indexOf(current) + 1} / {current.english}</p><h2 className="damage-detail-title">{current.name}</h2><p className="damage-detail-summary">{current.summary}</p>
@@ -95,6 +96,7 @@ export default function DamageAtlas() {
       </section>
       <section className="damage-sources" aria-labelledby="damage-sources-title"><div><p className="damage-kicker">延 伸 阅 读</p><h2 id="damage-sources-title">让保护有据可循。</h2><p>本页为常见病害的概括性科普。以下资料可帮助理解壁画保护的研究方法与基本原则。</p></div><div>{atlasSources.map(source => <a key={source.href} href={source.href} target="_blank" rel="noreferrer"><span>{source.title}<small>{source.description}</small></span><ArrowUpRight size={20} /></a>)}</div></section>
     </main>
+    <SeriesExplore active="damage-atlas" />
     <footer className="exhibit-footer exhibit-width"><a className="exhibit-brand" href="/">焕 壁</a><p>知其美，也知其脆弱。</p><a href="/#archive">返回丹青长廊 <ArrowUpRight size={16} /></a></footer>
   </div>;
 }

@@ -102,5 +102,5 @@ app.get("/{*path}", (_req, res) =>
   res.sendFile(path.join(dir, "../dist/index.html")),
 );
 app.listen(process.env.PORT || 8787, "127.0.0.1", () =>
-  console.log("焕壁 http://127.0.0.1:8787"),
+  console.log(`焕壁 http://127.0.0.1:${process.env.PORT || 8787}`),
 );

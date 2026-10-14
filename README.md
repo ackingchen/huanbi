@@ -15,6 +15,12 @@ npm run dev
 ## 放入展示图片
 运行所需图片、字体和音频位于 `public/`。主要展品信息位于 `src/exhibits.js`，千壁藏珍的图片清单位于 `src/treasures.json`，画廊配置位于 `src/gallery.js`。素材来源链接随展品数据保留，音效与字体的许可说明见 `public/audio/CREDITS.md` 和 `public/fonts/MaShanZheng-OFL.txt`。
 
+## 背景音乐与病害图鉴
+
+全站背景音乐为用户提供的《10月11日》，自动尝试播放并单曲循环；浏览器若拦截有声自动播放，首次点击页面即可开始。右下角可暂停或恢复，前后台切换保持播放进度。
+
+病害图鉴使用 AI 绘制的六张分类卡片和一张观察图，支持六类局部放大。这些图片是教学示意，不是实物病害标注。
+
 ## 图片生成
 后端 `server/index.mjs` 调用 OpenAI-compatible `images.edit`，预设提示词位于 `server/prompt.mjs`。默认保留用户指定的 `gpt-image-2`，可通过 `OPENAI_IMAGE_MODEL` 和 `OPENAI_BASE_URL` 配置实际服务商。官方模型文档访问受限，真实模型可用性、权限和返回格式需要用自己的接口验证；没有自动切换到其他模型。
 当前期待 `data[0].b64_json` 返回图片。强度是提示词中的程度指引，不是模型的独立数值参数；生成结果是视觉推演而非考古真实性证明。前后对比采用同一画布 contain 显示，模型若改变构图须人工复核。

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edd3a0"/><stop offset=".48" stop-color="#c8a15a"/><stop offset="1" stop-color="#80572f"/></linearGradient></defs><g transform="translate(160 160) scale(-1 -1)">
+<path d="M12 145V39Q12 12 39 12H145L133 22H43Q22 22 22 43V133Z" fill="url(#metal)" stroke="#80572f" stroke-width="1.5"/>
+<path d="M29 137V49Q29 29 49 29H137" stroke="#edd3a0" stroke-width="2"/>
+<path d="M36 108Q29 64 64 55Q89 50 99 65Q111 84 92 90Q76 95 77 78Q78 69 88 72M49 99Q48 80 65 79Q78 80 73 91Q66 103 60 94M56 53Q75 29 106 39Q130 47 125 68Q121 85 106 78Q93 71 104 62Q112 57 115 67" stroke="#80572f" stroke-width="3" fill="none"/>
+<path d="M39 62Q32 42 51 39Q65 39 66 49Q65 61 54 55M33 114Q48 124 50 143M113 33Q125 48 143 50" stroke="#edd3a0" stroke-width="2" fill="none"/>
+<path d="M40 101Q51 120 70 118Q67 104 52 104M99 40Q119 49 118 70Q104 67 104 52" fill="#c8a15a" stroke="#80572f"/>
+<path d="M47 47l8-8 8 8-8 8Z" fill="#9b5136" stroke="#edd3a0" stroke-width="1.5"/>
+<circle cx="17" cy="17" r="5" fill="#c8a15a" stroke="#edd3a0"/>
+<path d="M18 145l5-9M145 18l-9 5" stroke="#80572f" stroke-width="2"/>
+</g></svg>

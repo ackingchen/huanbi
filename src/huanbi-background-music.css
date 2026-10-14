@@ -1,0 +1,25 @@
+#huanbi-music-toggle {
+  position: fixed;
+  right: calc(20px + env(safe-area-inset-right));
+  bottom: calc(80px + env(safe-area-inset-bottom));
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid #bfa374;
+  border-radius: 24px;
+  background: #183234;
+  color: #f1dfba;
+  box-shadow: 0 4px 16px #0003;
+  font: 14px/1.5 "Noto Serif SC", "Songti SC", serif;
+  cursor: pointer;
+}
+#huanbi-music-toggle svg { width: 20px; height: 20px; }
+#huanbi-music-toggle:hover { background: #254649; }
+#huanbi-music-toggle:focus-visible { outline: 2px solid #dbac60; outline-offset: 4px; }
+@media (max-width: 767px) {
+  #huanbi-music-toggle { right: calc(12px + env(safe-area-inset-right)); bottom: calc(72px + env(safe-area-inset-bottom)); }
+}
