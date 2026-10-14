@@ -26,7 +26,7 @@
 }
 .huanbi-turn-art::before{
   content:"";position:absolute;background:center/contain no-repeat;
-  filter:sepia(1) saturate(.65);opacity:.2;
+  filter:sepia(1) saturate(.65);opacity:.42;
 }
 .huanbi-turn-left .huanbi-turn-art::before{
   background-image:url('/images/scroll/lotusLeft.webp');
@@ -54,7 +54,7 @@
   opacity:.55;
 }
 .huanbi-turn-cloud{
-  position:absolute;z-index:2;width:min(46vw,740px);height:24vh;opacity:.28;
+  position:absolute;z-index:2;width:min(46vw,740px);height:24vh;opacity:.34;
   background:url('/images/scroll/cloud.webp') center/contain no-repeat;
   pointer-events:none;
 }
@@ -67,7 +67,7 @@
 }
 .huanbi-turn-caption::before{
   content:"";position:absolute;z-index:-1;width:92vw;height:76vh;
-  background:radial-gradient(ellipse,#d9b980f2 5%,#d0ac72db 35%,#ba945b00 72%);
+  background:radial-gradient(ellipse,#d9b980c7 5%,#d0ac72a6 35%,#ba945b00 72%);
 }
 .huanbi-turn-kicker{
   display:flex;align-items:center;gap:1.125rem;

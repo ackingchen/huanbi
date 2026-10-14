@@ -24,6 +24,9 @@ import "./huanbi-admin.css";
 import "./huanbi-three-modules.css";
 import "./huanbi-page-turn.css";
 import "./huanbi-page-turn.js";
+import "./huanbi-exhibition-intro.css";
+import "./huanbi-background-music.css";
+import "./huanbi-background-music.js";
 import SeriesExplore from './components/SeriesExplore';
 import ParticleReveal from "./components/ParticleReveal";
 import RestorationProgress from "./components/RestorationProgress";
@@ -239,9 +242,5 @@ function App() {
   );
 }
 createRoot(document.getElementById("root")).render(
-  window.location.pathname.startsWith("/admin") ? (
-    <Admin />
-  ) : (
-    <SiteRouter Exhibition={Exhibition} Workbench={App} Cave={Cave} DamageAtlas={DamageAtlas} preloaders={preloaders} />
-  ),
+  <SiteRouter Exhibition={Exhibition} Workbench={App} Cave={Cave} DamageAtlas={DamageAtlas} Admin={Admin} preloaders={preloaders} />,
 );

@@ -39,6 +39,7 @@ export default function RestorationHistory({ revision, cacheMessage }) {
     return () => { active = false; };
   }, [revision, refresh]);
   async function remove(id) {
+    if (!confirm("删除这幅修复留影？删除后无法恢复。")) return;
     try { await deleteHistory(id); setRefresh(value => value + 1); }
     catch { setError('删除未成功，请稍后重试。'); }
   }

@@ -3,7 +3,7 @@ import ExhibitNav from './ExhibitNav';
 import '../page-transitions.css';
 
 const NavigationContext = createContext(null);
-const publicPaths = new Set(['/', '/workbench', '/cave', '/damage-atlas']);
+const publicPaths = new Set(['/', '/workbench', '/cave', '/damage-atlas', '/admin']);
 const normalizePath = path => path.replace(/\/$/, '') || '/';
 const readLocation = revision => ({
   pathname: normalizePath(location.pathname), href: location.href,
@@ -24,7 +24,7 @@ class RouteFailure extends Component {
   }
 }
 
-export default function SiteRouter({ Exhibition, Workbench, Cave, DamageAtlas, preloaders }) {
+export default function SiteRouter({ Exhibition, Workbench, Cave, DamageAtlas, Admin, preloaders }) {
   const [route, setRoute] = useState(() => readLocation(0));
   const [pending, startTransition] = useTransition();
   const revision = useRef(0);
@@ -92,12 +92,13 @@ export default function SiteRouter({ Exhibition, Workbench, Cave, DamageAtlas, p
   useLayoutEffect(() => {
     const previous = committed.current;
     committed.current = route;
-    document.documentElement.dataset.siteShell = 'true';
+    if (route.pathname === '/admin') delete document.documentElement.dataset.siteShell;
+    else document.documentElement.dataset.siteShell = 'true';
     if (route.pathname !== '/cave') {
       delete document.documentElement.dataset.caveEntry;
       document.getElementById('cave-boot-screen')?.remove();
     }
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', route.pathname === '/cave' ? '#12201a' : '#10292c');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', route.pathname === '/admin' ? '#f5f1e8' : route.pathname === '/cave' ? '#12201a' : '#10292c');
     if (route.revision === 0) return;
     const savedPosition = route.fromHistory ? positions.current.get(route.href) : undefined;
     if (savedPosition !== undefined) scrollTo({ top: savedPosition, behavior: 'instant' });
@@ -112,7 +113,7 @@ export default function SiteRouter({ Exhibition, Workbench, Cave, DamageAtlas, p
     window.HuanbiTurn?.settled(route.href);
   }, [route]);
 
-  const Page = route.pathname === '/workbench' ? Workbench : route.pathname === '/cave' ? Cave : route.pathname === '/damage-atlas' ? DamageAtlas : Exhibition;
+  const Page = route.pathname === '/admin' ? Admin : route.pathname === '/workbench' ? Workbench : route.pathname === '/cave' ? Cave : route.pathname === '/damage-atlas' ? DamageAtlas : Exhibition;
   return <NavigationContext.Provider value={{ ...route, navigate, pending }}>
     <Suspense fallback={<LoadingPage />}>
       <RouteFailure key={route.pathname}>
